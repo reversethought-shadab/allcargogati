@@ -1,7 +1,6 @@
 footer {
     background-color: #EFEFEF;
-    border-radius: 35px 35px 0px 0px;
-    padding: 141px 0 20px 0;
+    padding: 23px 0 20px 0;
 }
 .copyright-footer {
     font-size: 15px !important;
@@ -11,13 +10,13 @@ footer {
     color: #000;
 }
 .footer-box{
-    border-right: 1px solid #686868;
+    border-right: 1px solid #68686833;
     height: 100%;
 }
 
 .footer-box p,
 .footer-bottom-btm p {
-    color: green;
+    color: #28518F;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -58,6 +57,47 @@ footer {
     color: rgb(0, 0, 0);
     transform: translate(10px);
 }
+.social-icons img{
+    height: 32px;
+    padding-left: 7px;
+}
+.ft-top{
+border-bottom: 1px solid #68686833;
+width: 100%;
+display: flex;
+justify-content: space-evenly;
+}
+
+.ft-top p{
+    font-size: 14px;
+}
+.search{
+    position: relative;
+    margin-top: 27px;
+    margin-left: 5px;
+    }
+    .search input{
+     height: 40px;
+     border: 2px solid #d6d4d4;
 
 
+    }
+    .search input:focus{
 
+     box-shadow: none;
+     border: 2px solid blue;
+
+
+    }
+ .search button{
+    position: absolute;
+     top: 5px;
+     right: 5px;
+     height: 30px;
+     text-align: center;
+     font-size: 12px;
+     width: 50px;
+     background: blue;
+
+    }
+    

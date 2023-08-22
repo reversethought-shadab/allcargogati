@@ -6,27 +6,34 @@ const Footer = () => {
         <>
             <footer className="footer">
                <div className="ft-top">
-                <div className="row">
-                    <div className="col-lg-6">
+                <div className="row footer-bottom-btm align-items-center">
+                    <div className="col-lg-8">
                        <div className='ft-left d-flex' >
                        <div>
-                        <span className=''>Subscribe Now</span>
+                        <span className='fs-3 fw-light'>SUBSCRIBE NOW</span>
                         <p>To know more about Allcargo-Gati</p>
                         </div> 
-                        <div>
-                        <form class="row g-3">
-  
-  <div class="col-auto">
-    <input type="email" class="form-control" id="inputPassword2" placeholder="name@example.com" />
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Go</button>
-  </div>
-</form>
+                        <div class="search">
+                         
+                          <input type="email" class="form-control" placeholder="Email"/>
+                          <button class="btn btn-primary">Go</button>
                         </div>
                         </div> 
                     </div>
-                    <div className="col-lg-6"></div>
+                    <div className="col-lg-4">
+                    <div class="">
+
+<ul className='d-flex list-unstyled social-icons'>
+    FOLLOW US
+<li><img src="/images/facebook.png" alt="" /></li>
+<li><img src="/images/instagram.png" alt="" /></li>
+<li><img src="/images/whatsap.png" alt="" /></li>
+<li><img src="/images/linkedin.png" alt="" /></li>
+<li><img src="/images/youtubb.png" alt="" /></li>
+</ul>
+
+</div>
+                    </div>
                 </div>
                </div>
                 <div className="container">
@@ -126,13 +133,11 @@ const Footer = () => {
                         <div className="col-lg-1  col-12">
                             <div className="footer-box footer-col-1 border-0 ">
                               
-                                <ul className=''>
-                                    <li>
+                                
+                                    <li className='list-unstyled mt-5'>
                                         <img src="/images/ftlogo.png" alt="" />
                                     </li>
                                     
-                                    
-                                </ul>
                             </div>
                         </div>
                     </div>
