@@ -103,3 +103,26 @@ font-size: 18px;
     transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
     border: none;
   }
+  .overview{
+    padding: 80px 20px;
+  }
+.title{
+    font-size: 37px;
+    font-weight: 600;
+    color: rgb(110, 106, 106);
+    text-align: center;
+}
+.counter{
+    padding: 12px 130px;
+}
+.counter p{
+    margin-bottom: 0 !important;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.counter span{
+    font-size: 52px;
+    font-weight: 700;
+    color: rgb(40, 81, 143);
+}

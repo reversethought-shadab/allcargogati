@@ -88,13 +88,36 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container overview py-5 ">
         <div className="row">
           <div className="col-12">
-            <h3>
+            <h3 className="title">
             Empowering Businesses, Accelerating Growth:
-Our Express Commitment 
+            <br />
+               Our Express Commitment 
             </h3>
+          </div>
+          <div className="row counter">
+            <div className="col-lg-3 ">
+              <p>Reach over</p>
+              <span className="number">19800</span>
+              <p>Pincodes</p>
+            </div>
+            <div className="col-lg-3">
+              <p>over</p>
+              <span>600</span>
+              <p>Offices</p>
+            </div>
+            <div className="col-lg-3">
+              <p>Direct Delivery to</p>
+              <span>5100+</span>
+              <p>Pincodes</p>
+            </div>
+            <div className="col-lg-3">
+<p>Fleet Size of</p>
+<span>5000+</span>
+<p>Trucks</p>
+            </div>
           </div>
         </div>
       </div>
