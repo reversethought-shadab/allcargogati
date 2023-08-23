@@ -6,7 +6,9 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-
+#root{
+  overflow: hidden;
+}
 .menu {
   width: 300px;
   height: 100%;
@@ -115,7 +117,7 @@
 }
 
 .image::after {
-  content: '';
+  content:'';
   position: absolute;
   bottom: 0;
   right: 0;
@@ -322,9 +324,10 @@ section {
   margin-top: 7px;
 }
 
+
 .work-porcess-area .process-info .single-process {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -355,10 +358,50 @@ section {
   box-shadow: 0 10px 30px 0 rgba(248, 32, 72, 0.4)
 }
 
+.work-porcess-area .process-info:after {
+  position: absolute;
+  content: "";
+  top:50%;
+  border: dashed 2px #fff;
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .work-porcess-area .process-info .single-process:after {
   position: absolute;
-  content: "\f101";
-  font-family: "fontawesome";
+  content: "2023";
+  padding: 4px 6px;
+  background-color: #000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -65px;
+  color: #f82249;
+}
+.work-porcess-area .process-info .single-process-3:after {
+  position: absolute;
+  content: "2022";
+  padding: 4px 6px;
+  background-color: #000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: -65px;
+  color: #f82249;
+}
+.work-porcess-area .process-info .single-process-2:after {
+  position: absolute;
+  content: "2021";
+  padding: 4px 6px;
+  background-color: #000;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -443,6 +486,7 @@ section {
     padding-left: 30px;
     margin-bottom: 229px;
 }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -477,12 +521,28 @@ section {
     top: 361px;
     width: 306px;
   }
+  .counter{
+    border-top: none !important;
+    border-right: none !important ;
+    display: table;
+  }
+  .title{
+    font-size: 27px;
+  }
 }
 @media only screen and (max-width: 380px) {
   .main-img{
     top: 361px;
     width: 210px;
     right: 6px;
+  }
+  .counter{
+    border-top: none !important;
+    border-right: none !important ;
+    display: table;
+  }
+  .title{
+    font-size: 20px;
   }
   .content h1 {
 font-size: 22px;

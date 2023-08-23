@@ -104,7 +104,7 @@ const Hero = () => {
           </div>
           <div className="col-lg-7">
             <div className="icon-container">
-              <div className=" image-container">
+              <div className="image-container">
                 <img
                   src="/images/box-img.jpg"
                   className="video-thumbnail image "
@@ -308,35 +308,31 @@ const Hero = () => {
           <div className="process-info">
             <div className="row">
               <div className="col-md-3">
-                <div className="single-process first text-center">
-                  <i className="fas fa-search"></i>
-                  <h4>
+                <div className="single-process single-process-2 first text-center">
+                
                     <img src="/images/package.png" alt="" />
-                  </h4>
+                  
                 </div>
               </div>
               <div className="col-md-3">
-                <div className="single-process secend text-center">
-                  <i className="fas fa-cog"></i>
-                  <h4>
+                <div className="single-process single-process-3 secend text-center">
+                
                     <img src="/images/package.png" alt="" />
-                  </h4>
+                  
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="single-process thard text-center">
-                  <i className="fas fa-globe"></i>
-                  <h4>
+                
                     <img src="/images/package.png" alt="" />
-                  </h4>
+                  
                 </div>
               </div>
               <div className="col-md-3">
-                <div className="single-process last text-center">
-                  <i className="fas fa-sync-alt"></i>
-                  <h4>
+                <div className="single-process  last text-center">
+                
                     <img src="/images/package.png" alt="" />
-                  </h4>
+                  
                 </div>
               </div>
             </div>
