@@ -22,7 +22,11 @@ const trackHandle =() =>{
 const closeTrack = () => {
   setShowTrack(false);
 }
+const [selectedValue, setSelectedValue] = useState('docket');
 
+  const handleRadioChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
   return (
     <>
       {/* menu section start here  */}
@@ -31,7 +35,35 @@ const closeTrack = () => {
   <div className="track-items">
 <img src="/images/close.svg" className="close-butn" onClick={closeTrack} />
     <h3 className="text-white fs-5 mx-5 my-5 py-5">TRACK YOUR PARCEL</h3>
-
+    
+	<ul className="check-form">
+		<li className="check-items">
+			<input type="radio" name="name" id="one" value="docket"
+            checked={selectedValue === 'docket'}
+            onChange={handleRadioChange}  />
+			<label htmlFor="one">Docket No.</label>
+			
+			<div className="check"></div>
+		</li>
+		
+		<li className="check-items">
+			<input type="radio" name="name" id="two" value="ref"
+            checked={selectedValue === 'ref'}
+            onChange={handleRadioChange} />
+			<label htmlFor="two">Ref No.</label>
+			
+			<div className="check"></div>
+		</li>
+	</ul>
+  <form className="rounded-form mx-5">
+  <input
+    type="text"
+    placeholder={
+      selectedValue === 'docket' ? 'Enter Docket No.' : 'Enter Ref No.'
+    }
+  />
+  <button className="rounded-track-button">Track</button>
+</form>
   </div>
   </div>}
       {showMenu && <div className="menu">
