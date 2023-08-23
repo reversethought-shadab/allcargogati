@@ -15,12 +15,61 @@ const Hero = () => {
     setShowMenu(false);
   }
 
+const [showTrack, setShowTrack] = useState(false);
+const trackHandle =() =>{
+  setShowTrack(true);
+}
+const closeTrack = () => {
+  setShowTrack(false);
+}
 
   return (
     <>
       {/* menu section start here  */}
+{showTrack && <div className="track">
 
-      {showMenu && <div className="menu"></div>}
+  <div className="track-items">
+<img src="/images/close.svg" className="close-butn" onClick={closeTrack} />
+    <h3 className="text-white fs-5 mx-5 my-5 py-5">TRACK YOUR PARCEL</h3>
+
+  </div>
+  </div>}
+      {showMenu && <div className="menu">
+      <nav class="sidenavbar">
+    <ul class="main-buttons">
+      <li className="fs-5">
+        Services
+      <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 2L13.8 10.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 6.17004V11H17.83" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <ul className="hidden  ">
+          <li className="fs-5"><a href="" className="text-white">Express Distribution</a></li>
+          <li className="fs-5"><a href="" className="text-white">Retail Services</a> </li>
+          <li className="fs-5"><a href="" className="text-white">Supply Chain Solutions</a> </li>
+          <li className="fs-5"><a href="" className="text-white">Air Freight</a></li>
+        </ul>
+      </li>
+      <li className="fs-5">
+        Tools
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 2L13.8 10.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 6.17004V11H17.83" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <ul class="hidden">
+          <li className="fs-5"><a href="" className="text-white">Tool1</a></li>
+          <li className="fs-5"><a href="" className="text-white">Tool2</a></li>
+          <li className="fs-5"><a href="" className="text-white">Tool3</a></li>
+        </ul>
+      </li>
+      <li className="fs-5"><a href="" className="text-white">Media</a>  </li>
+      <li className="fs-5"><a href="" className="text-white">Careers</a>  </li>
+      <li className="fs-5"><a href="" className="text-white">Blogs</a>  </li>
+      <li className="fs-5"><a href="" className="text-white">About Us</a>  </li>
+    <h4  className="border-top py-3 fs-5 mx-5"><a href="" className="text-white">Login</a></h4>
+      <div className="btn-group mx-5 pb-3">
+         <button type="button" className="btn btn-primary rounded-5">Costomer</button>
+    <button type="button" className="btn mx-3 btn-primary rounded-5">Business Partner</button>
+    <button type="button" className="btn btn-primary rounded-5">Vendor</button>
+        </div>
+    </ul>
+    <h4 className="text-white mx-5 mb-5 fs-5 "><a href="" className="text-white">Enquire Now</a> </h4>
+</nav>
+        </div>}
 
       <div className="container-fluid">
         <div className="row align-items-center">
@@ -29,12 +78,13 @@ const Hero = () => {
               <nav className="sidebar-nav-list">
                 <div className="mb-3">
 
-                  {showMenu ? <h1 onClick={closeHandle}>X</h1> : <img src="/images/hamburger.png" className="sidebar-nav-item" onClick={menuHandle} />}
+                  {showMenu ? <img src="/images/close.png" onClick={closeHandle} alt="" className="close-btn" /> : <img src="/images/hamburger.png" className="sidebar-nav-item" onClick={menuHandle} />}
 
                 </div>
                 <div className="mt-4">
                   <img
                     src="/images/tracking-app.png"
+                    onClick={trackHandle}
                     className="sidebar-nav-item"
                     alt=""
                   />
@@ -72,7 +122,7 @@ const Hero = () => {
               </div>
               <div className="content ">
                 <h1 className="text-white">Connecting India,</h1>
-                <h2 className="display-2 text-white fw-bold">Seamlessly!</h2>
+                <h2 className="display-2 text-white fw-bold"> Seamlessly!</h2>
                 <Button variant="btn-hero btn-secondary rounded-5 mt-3">
                   Get Started
                   <span>

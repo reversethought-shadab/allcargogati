@@ -10,15 +10,133 @@
 #root{
   overflow: hidden;
 }
-.menu {
-  width: 300px;
+a{
+  text-decoration: none;
+}
+svg{
+  transform: rotate(180deg);
+}
+
+.sidenavbar {
+  position: absolute;
+   width: 200px; 
+   border-right: 4px solid red;
+    width: 100%;
+    max-width: 500px;
+    background-color: #1E2027;
+}
+.sidenavbar .main-buttons {
+  list-style-type: none;
+  margin: 35px 0;
+  padding: 0;
+  color: #fff;
+border-bottom: 2px solid #f8f8f8;
+}
+.btn-primary {
+  font-size: 13px;
+  color: rgba(58, 133, 191, 0.75);
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid rgba(58, 133, 191, 0.75);
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-primary:hover {
+  color: #FFF;
+  background: rgba(58, 133, 191, 0.75);
+  border: 2px solid rgba(58, 133, 191, 0.75);
+}
+
+.sidenavbar .main-buttons li {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.sidenavbar .main-buttons > li {
+  padding: 16px 52px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.sidenavbar .main-buttons > li .fa {
+  position: absolute;
+  left: 12px;
+  color: #414655;
+}
+.sidenavbar .main-buttons > li:hover, .sidenav .main-buttons > li:active, .sidenav .main-buttons > li:focus {
+  background-color: #292c35;
+  cursor: pointer;
+}
+.sidenavbar .main-buttons > li:hover .hidden, .sidenav .main-buttons > li:active .hidden, .sidenav .main-buttons > li:focus .hidden {
+  width: 228px;
+}
+
+.hidden {
+  width: 0;
   height: 100%;
+  padding: 64px 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #292c35;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.hidden li {
+  padding: 13px 12px;
+text-decoration: none;
+}
+.hidden li>a{
+  font-size: 12px;
+}
+.hidden li:hover, .hidden li:active, .hidden li:focus {
+  background-color: #323541;
+  text-decoration: none;
+}
+.track-items{
+  position: absolute;
+  width: 200px; 
+  border-right: 4px solid red;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+}
+.close-butn{
+  height: 40px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.track {
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  background-color: #1E2027;
+  position: absolute;
+  top: 3%;
+  left: 90px;
+  z-index: 9;
+}
+
+.menu {
+  max-width: 500px;
+  width: 100%;
+  height: 500px;
   background-color: #9195a2;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 90px;
   z-index: 9;
-
 }
 .btn-hero{
   padding: 4px 7px;
@@ -83,7 +201,16 @@
   right: 0;
   top: 70px;
   align-items: center;
-  overflow-wrap: break-word;
+  display: block;
+}
+.main-img::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 16px;
+  background-color: red;
 }
 .content-left {
   padding-left: 100px;
@@ -113,17 +240,17 @@
   background-position: right center;
   height: 430px;
   background-size: cover;
-  display: block;
+  display: inline-block;
   max-width: 100%;
 }
 
-.image::after {
-  content:'';
+.image-container::after {
+  content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -8px; 
   right: 0;
-  width: 100%;
-  height: 2px;
+  width: 10%;
+  height: 16px; 
   background-color: red;
 }
 
@@ -359,17 +486,7 @@ section {
   box-shadow: 0 10px 30px 0 rgba(248, 32, 72, 0.4)
 }
 
-.work-porcess-area .process-info:after {
-  position: absolute;
-  content: "";
-  top:50%;
-  border: dashed 2px #fff;
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+
 .work-porcess-area .process-info .single-process:after {
   position: absolute;
   content: "2023";
