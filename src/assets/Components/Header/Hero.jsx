@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Countedup from "./Countedup";
 const Hero = () => {
-  
+
   const [showServices, setShowServices] = useState(false);
   const [showTools, setShowTools] = useState(false);
 
@@ -26,7 +26,7 @@ const Hero = () => {
 
   const handleItemClick = (itemName) => {
     setActiveItem(itemName);
-    
+
   };
   const sidebarItems = [
     { id: 1, imageSrc: '/images/tracking-app.png', text: 'TRACK YOUR PARCEL' },
@@ -43,85 +43,85 @@ const Hero = () => {
   const closeHandle = () => {
     setShowMenu(false);
   }
-const [showChat, setShowChat] = useState(false);
-const chatHandle = () => {
-  setShowChat(true);
-}
+  const [showChat, setShowChat] = useState(false);
+  const chatHandle = () => {
+    setShowChat(true);
+  }
   const closeChatHandle = () => {
     setShowChat(false);
-}
+  }
 
-const [showTrack, setShowTrack] = useState(false);
-const trackHandle =() =>{
-  setShowTrack(true);
-}
-const closeTrack = () => {
-  setShowTrack(false);
-}
-const [selectedValue, setSelectedValue] = useState('docket');
+  const [showTrack, setShowTrack] = useState(false);
+  const trackHandle = () => {
+    setShowTrack(true);
+  }
+  const closeTrack = () => {
+    setShowTrack(false);
+  }
+  const [selectedValue, setSelectedValue] = useState('docket');
 
   const handleRadioChange = (event) => {
     setSelectedValue(event.target.value);
   };
   return (
     <>
-    {showChat && <div className="chatmenu">
-    <div className="chat-items">
-<img src="/images/close.svg" className="close-butn" onClick={closeChatHandle} />
-     <div className="whatsapp relative ">
-       <img src="/images/reach.png" className="reach" alt="" />
-       <div className="genie">
-        <h5 className="text-white chat">Chat With Genie</h5>
-        <span className="text-white chat">on Whatsapp</span>
+      {showChat && <div className="chatmenu">
+        <div className="chat-items">
+          <img src="/images/close.svg" className="close-butn" onClick={closeChatHandle} />
+          <div className="whatsapp relative ">
+            <img src="/images/reach.png" className="reach" alt="" />
+            <div className="genie">
+              <h5 className="text-white chat">Chat With Genie</h5>
+              <span className="text-white chat">on Whatsapp</span>
+            </div>
+          </div>
+          <div className="assistent">
+            <div className="expert">
+              <img src="/images/comment.png" alt="" />
+            </div>
+          </div>
         </div>
-     </div>
-     <div className="assistent">
-       <div className="expert">
-        <img src="/images/comment.png" alt="" />
-       </div>
-     </div>
-    </div>
-    </div>}
+      </div>}
       {/* menu section start here  */}
-{showTrack && <div className="track">
+      {showTrack && <div className="track">
 
 
-<img src="/images/close.svg" className="close-butn" onClick={closeTrack} />
-    <h3 className="text-white fs-5 mx-5 my-5 py-5 track-font">TRACK YOUR PARCEL</h3>
-    
-	<ul className="check-form">
-		<li className="check-items">
-			<input type="radio" name="name" id="one" value="docket"
-            checked={selectedValue === 'docket'}
-            onChange={handleRadioChange}  />
-			<label htmlFor="one">Docket No.</label>
-			
-			<div className="check"></div>
-		</li>
-		
-		<li className="check-items">
-			<input type="radio" name="name" id="two" value="ref"
-            checked={selectedValue === 'ref'}
-            onChange={handleRadioChange} />
-			<label htmlFor="two">Ref No.</label>
-			
-			<div className="check"></div>
-		</li>
-	</ul>
-  <form className="rounded-form mx-5">
-  <input
-    type="text"
-    placeholder={
-      selectedValue === 'docket' ? 'Enter Docket No.' : 'Enter Ref No.'
-    }
-  />
-  <button className="rounded-track-button">Track</button>
-</form>
-  
-  </div>}
+        <img src="/images/close.svg" className="close-butn" onClick={closeTrack} />
+        <h3 className="text-white fs-5 mx-5 my-5 py-5 track-font">TRACK YOUR PARCEL</h3>
+
+        <ul className="check-form">
+          <li className="check-items">
+            <input type="radio" name="name" id="one" value="docket"
+              checked={selectedValue === 'docket'}
+              onChange={handleRadioChange} />
+            <label htmlFor="one">Docket No.</label>
+
+            <div className="check"></div>
+          </li>
+
+          <li className="check-items">
+            <input type="radio" name="name" id="two" value="ref"
+              checked={selectedValue === 'ref'}
+              onChange={handleRadioChange} />
+            <label htmlFor="two">Ref No.</label>
+
+            <div className="check"></div>
+          </li>
+        </ul>
+        <form className="rounded-form mx-5">
+          <input
+            type="text"
+            placeholder={
+              selectedValue === 'docket' ? 'Enter Docket No.' : 'Enter Ref No.'
+            }
+          />
+          <button className="rounded-track-button">Track</button>
+        </form>
+
+      </div>}
       {showMenu && <div className="menu">
-      <nav class="sidenavbar">
-    {/* <ul class="main-buttons">
+        <nav class="sidenavbar">
+          {/* <ul class="main-buttons">
       <li className="fs-5">
         Services
       <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 2L13.8 10.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 6.17004V11H17.83" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -153,59 +153,59 @@ const [selectedValue, setSelectedValue] = useState('docket');
         </div>
     </ul>
     <h4 className="text-white mx-5 mb-5 fs-5 "><a href="" className="text-white">Enquire Now</a> </h4> */}
-  <ul class="navbar-nav ">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" onClick={toggleServices} href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Services
-          </a>
-          {showServices && (  <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <a class="dropdown-item" href="#">Express Distribution</a>
-            <a class="dropdown-item" href="#">Retail Services</a>
-            <a class="dropdown-item" href="#">Supply Chain Solutions</a>
-            <a class="dropdown-item" href="#">Air Freight</a>
+          <ul class="navbar-nav ">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" onClick={toggleServices} href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Services
+              </a>
+              {showServices && (<div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <a class="dropdown-item" href="#">Express Distribution</a>
+                <a class="dropdown-item" href="#">Retail Services</a>
+                <a class="dropdown-item" href="#">Supply Chain Solutions</a>
+                <a class="dropdown-item" href="#">Air Freight</a>
+              </div>
+              )}
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" onClick={toggleTools} href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tools
+              </a>
+              {showTools && (
+                <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                  <a class="dropdown-item" href="#">Tool 1</a>
+                  <a class="dropdown-item" href="#">Tool 2</a>
+                  <a class="dropdown-item" href="#">Tool 3</a>
+                  <a class="dropdown-item" href="#">Tool 4</a>
+                </div>)}
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+          <div className="brde">
+            <li class="nav-item text-white list-unstyled">
+              <a class="login  nav-link" href="#">Login</a>
+            </li>
+            <div class="btn-group">
+              <button class="btn btn-rounded btn-secondary">Button 1</button>
+              <button class="btn btn-rounded btn-secondary">Button 2</button>
+              <button class="btn btn-rounded btn-secondary">Button 3</button>
+            </div>
           </div>
-          )}
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" onClick={toggleTools} href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Tools
-          </a>
-          {showTools && (
-          <div class="dropdown-menu" aria-labelledby="toolsDropdown">
-            <a class="dropdown-item" href="#">Tool 1</a>
-            <a class="dropdown-item" href="#">Tool 2</a>
-            <a class="dropdown-item" href="#">Tool 3</a>
-            <a class="dropdown-item" href="#">Tool 4</a>
-          </div>  )}
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Media</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Careers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blogs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-      </ul>
-       <div className="brde">
-        <li class="nav-item text-white list-unstyled">
-          <a class="login  nav-link" href="#">Login</a>
-        </li>
-      <div class="btn-group">
-        <button class="btn btn-rounded btn-secondary">Button 1</button>
-        <button class="btn btn-rounded btn-secondary">Button 2</button>
-        <button class="btn btn-rounded btn-secondary">Button 3</button>
-      </div>
-       </div>
-       <div className="explore">
-        <li className="nav-item text-white list-unstyled"><a href="" className="explore nav-links">Explore Now</a></li>
-       </div>
-</nav>
-        </div>}
+          <div className="explore">
+            <li className="nav-item text-white list-unstyled"><a href="" className="explore nav-links">Explore Now</a></li>
+          </div>
+        </nav>
+      </div>}
 
       <div className="container-fluid">
         <div className="row align-items-center">
@@ -218,21 +218,21 @@ const [selectedValue, setSelectedValue] = useState('docket');
 
                 </div>
                 <div className={`mt-4 sidebar-nav-item ${activeItem === 'TRACK YOUR PARCEL' ? 'active' : ''}`} onClick={() => { handleItemClick('TRACK YOUR PARCEL'); trackHandle(); }}>
-          <img src="/images/tracking-app.png" alt="" />
-          <p>TRACK YOUR PARCEL</p>
-        </div>
-        <div className={`mt-4 sidebar-nav-item border-right ${activeItem === 'CHAT WITH US' ? 'active' : ''}`} onClick={() => { handleItemClick('CHAT WITH US'); chatHandle(); }}>
-          <img src="/images/whatsap.png" alt="" />
-          <p>CHAT WITH US</p>
-        </div>
-        <div className={`mt-4 sidebar-nav-item ${activeItem === 'RATE & TRANSIT TIME' ? 'active' : ''}`} onClick={() => handleItemClick('RATE & TRANSIT TIME')}>
-          <img src="/images/calculator.png" alt="" />
-          <p>RATE & TRANSIT TIME</p>
-        </div>
-        <div className={`mt-4 sidebar-nav-item ${activeItem === 'PICK UP REQUEST' ? 'active' : ''}`} onClick={() => handleItemClick('PICK UP REQUEST')}>
-          <img src="/images/package.png" alt="" />
-          <p>PICK UP REQUEST</p>
-        </div>
+                  <img src="/images/tracking-app.png" alt="" />
+                  <p>TRACK YOUR PARCEL</p>
+                </div>
+                <div className={`mt-4 sidebar-nav-item border-right ${activeItem === 'CHAT WITH US' ? 'active' : ''}`} onClick={() => { handleItemClick('CHAT WITH US'); chatHandle(); }}>
+                  <img src="/images/whatsap.png" alt="" />
+                  <p>CHAT WITH US</p>
+                </div>
+                <div className={`mt-4 sidebar-nav-item ${activeItem === 'RATE & TRANSIT TIME' ? 'active' : ''}`} onClick={() => handleItemClick('RATE & TRANSIT TIME')}>
+                  <img src="/images/calculator.png" alt="" />
+                  <p>RATE & TRANSIT TIME</p>
+                </div>
+                <div className={`mt-4 sidebar-nav-item ${activeItem === 'PICK UP REQUEST' ? 'active' : ''}`} onClick={() => handleItemClick('PICK UP REQUEST')}>
+                  <img src="/images/package.png" alt="" />
+                  <p>PICK UP REQUEST</p>
+                </div>
               </nav>
             </div>
             <div className="left">
@@ -286,85 +286,71 @@ const [selectedValue, setSelectedValue] = useState('docket');
           </div>
         </div>
       </div>
-      <Countedup/>
+      <Countedup />
       <div className="container-fluid py-5">
-        <div className="row">
+        <div className="row text-center">
           <div className="col-lg-3 col-md-6 gy-3">
-            <div class="card-container overlay position-relative">
-              <img
-                class="image"
-                src="/images/young-delivery.avif"
-                alt="Card image cap"
-              />
-              <p className="image-title">EXPRESS DISTRIBUTION</p>
-              <div class="middle">
-                <div className="inner-text">
-                  <h3>EXPRESS DISTRIBUTION</h3>
-                  Express Distribution offers direct route connectivity to all
-                  major locations in India, thereby helping you save on time
-                  <button type="button" class="btn-card">
-                    Get Started
-                    <span>
-                      <img
-                        src="/images/right.png"
-                        class="btn-image"
-                        alt=""
-                      />
-                    </span>
-                  </button>
-                </div>
+            <div class="item clean">
+              <img src="/images/carg1.jpeg" className="img-fluid w-100 h-100" alt="image" />
+              <div class="overlay">
+                <span>EXPRESS
+                  DISTRIBUTION</span>
+                <span>Express Distribution offers direct
+                  route connectivity to all major
+                  locations in India, thereby helping
+                  you save on time </span>
+                <span></span>
+                <button className="btn-card">Know More</button>
               </div>
+              <p className="image-title">   EXPRESS
+                DISTRIBUTION</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 gy-3">
-            <div class="card-container overlay position-relative">
-              <img
-                class="image"
-                src="/images/young-delivery.avif"
-                alt="Card image cap"
-              />
-              <p className="image-title">hello</p>
-              <div class="middle">
-                <div className="inner-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-                  vitae sit labore explicabo quibusdam enim odio illo
-                  repudiandae necessitatibus ducimus!
-                </div>
+            <div class="item clean">
+              <img src="/images/carg2.jpeg" className="img-fluid w-100 h-100" alt="image" />
+              <div class="overlay">
+                <span>EXPRESS
+                  DISTRIBUTION</span>
+                <span>Express Distribution offers direct
+                  route connectivity to all major
+                  locations in India, thereby helping
+                  you save on time </span>
+                <span></span>
+                <button className="btn-card">Know More</button>
               </div>
+              <p className="image-title"> EXPRESS DISTRIBUTION</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 gy-3">
-            <div class="card-container overlay position-relative">
-              <img
-                class="image"
-                src="/images/young-delivery.avif"
-                alt="Card image cap"
-              />
-              <p className="image-title">hello</p>
-              <div class="middle">
-                <div className="inner-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-                  vitae sit labore explicabo quibusdam enim odio illo
-                  repudiandae necessitatibus ducimus!
-                </div>
+            <div class="item clean">
+              <img src="/images/carg3.webp" className="img-fluid w-100 h-100" alt="image" />
+              <div class="overlay">
+                <span>SUPPLY CHAIN SOLUTIONS</span>
+                <span>Express Distribution offers direct
+                  route connectivity to all major
+                  locations in India, thereby helping
+                  you save on time </span>
+                <span></span>
+                <button className="btn-card">Know More</button>
               </div>
+              <p className="image-title">RETAIL SERVICES</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 gy-3">
-            <div class="card-container overlay position-relative">
-              <img
-                class="image"
-                src="/images/young-delivery.avif"
-                alt="Card image cap"
-              />
-              <p className="image-title">hello</p>
-              <div class="middle">
-                <div className="inner-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-                  vitae sit labore explicabo quibusdam enim odio illo
-                  repudiandae necessitatibus ducimus!
-                </div>
+            <div class="item clean">
+              <img src="/images/carg4.webp" className="img-fluid w-100 h-100" alt="image" />
+              <div class="overlay">
+                <span>EXPRESS
+                  DISTRIBUTION</span>
+                <span>Express Distribution offers direct
+                  route connectivity to all major
+                  locations in India, thereby helping
+                  you save on time </span>
+                <span></span>
+                <button className="btn-card">Know More</button>
               </div>
+              <p className="image-title">   GATI AIR</p>
             </div>
           </div>
         </div>
@@ -446,30 +432,30 @@ const [selectedValue, setSelectedValue] = useState('docket');
             <div className="row">
               <div className="col-md-3">
                 <div className="single-process single-process-2 first text-center">
-                
-                    <img src="/images/package.png" alt="" />
-                  
+
+                  <img src="/images/package.png" alt="" />
+
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="single-process single-process-3 secend text-center">
-                
-                    <img src="/images/package.png" alt="" />
-                  
+
+                  <img src="/images/package.png" alt="" />
+
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="single-process thard text-center">
-                
-                    <img src="/images/package.png" alt="" />
-                  
+
+                  <img src="/images/package.png" alt="" />
+
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="single-process  last text-center">
-                
-                    <img src="/images/package.png" alt="" />
-                  
+
+                  <img src="/images/package.png" alt="" />
+
                 </div>
               </div>
             </div>
