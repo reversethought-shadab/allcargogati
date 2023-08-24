@@ -400,7 +400,7 @@ label {
   border: none;
 }
 /* cardsssssssss */
-.item{
+.item {
   /* height: 400px; */
   object-fit: cover;
   background-color: white;
@@ -411,7 +411,7 @@ label {
   box-shadow: 2px 3px 10px #444444;
 }
 
-.item .overlay{
+.item .overlay {
   color: #000;
   width: 100%;
   height: 100%;
@@ -419,29 +419,29 @@ label {
   opacity: 0;
   transition: all 0.5s ease;
   position: absolute;
-  top: 0; 
+  top: 0;
   bottom: 0;
 }
 
-.clean .overlay span:nth-child(1){
+.clean .overlay span:nth-child(1) {
   position: absolute;
   left: 49%;
-    top: 9%;
+  top: 9%;
   font-size: 20px;
   font-weight: bold;
   font-family: coustard;
   transform: translateX(-50%);
 }
 
-.clean .overlay span:nth-child(2){
+.clean .overlay span:nth-child(2) {
   position: absolute;
   top: 25%;
-    left: 50%;
+  left: 50%;
   font-size: 17px;
   transform: translateX(-50%);
 }
 
-.clean .overlay span:nth-child(3){
+.clean .overlay span:nth-child(3) {
   height: 3px;
   background-color: #000;
   position: absolute;
@@ -449,30 +449,38 @@ label {
   left: 0;
 }
 
-.clean .overlay:hover{
+.clean .overlay:hover {
   opacity: 0.93;
 }
 
-.clean .overlay:hover span:nth-child(1){
+.clean .overlay:hover span:nth-child(1) {
   animation: slide 0.4s;
 }
 
-.clean .overlay:hover span:nth-child(2){
+.clean .overlay:hover span:nth-child(2) {
   animation: slide 0.7s;
 }
 
-.clean .overlay:hover span:nth-child(3){
+.clean .overlay:hover span:nth-child(3) {
   animation: line 0.5s forwards;
 }
 
-@keyframes slide{
-  0%   {transform:translateX(-10%);}
-  100% {transform:translateX(-50%);}
+@keyframes slide {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
-@keyframes line{
-  0%   {width: 0;}
-  100% {width: 50%}
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
 }
 /* ======== */
 .overview {
@@ -551,10 +559,10 @@ label {
 }
 
 .btn-card {
-  padding: 3px 9px;
+  padding: 11px 29px;
   position: absolute;
   top: 332px;
-  left: 98px;
+  left: 87px;
   display: block;
   border-radius: 40px;
   color: #fff;
@@ -784,7 +792,7 @@ section {
     top: 100px;
     width: 50%;
   }
-  
+
   .left {
     padding-left: 15px;
   }
@@ -798,6 +806,16 @@ section {
     right: 26px;
     width: 50vw;
   }
+  .clean .overlay span:nth-child(2) {
+    top: 32%;
+    left: 50%;
+    font-size: 20px;
+    
+}
+.btn-card {
+  padding: 11px 33px;
+  top: 447px;
+  left: 121px;}
   .arrow {
     height: 31px;
   }
@@ -825,9 +843,12 @@ section {
     padding: 10px 26px;
     position: absolute;
     top: 61%;
-    left: 34%;}
-    .clean .overlay span:nth-child(2) {
-      font-size: 21px;
+    left: 34%;
+  }
+  .clean .overlay span:nth-child(2) {
+    font-size: 21px;
+    top: 33%;
+    left: 50%;
   }
   .left {
     margin-top: 0;
@@ -914,6 +935,10 @@ section {
     max-width: 306px;
     height: 280px;
     left: 51px;
+  }
+  .btn-card {
+    top: 72%;
+    left: 31%;
   }
   .counter {
     border-top: none !important;
