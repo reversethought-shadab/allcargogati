@@ -16,7 +16,7 @@ const Footer = () => {
                         <div class="search">
                          
                           <input type="email" class="form-control" placeholder="Email"/>
-                          <button class="btn btn-primary">Go</button>
+                          <button class="btn btn-primary text-white">Go</button>
                         </div>
                         </div> 
                     </div>
