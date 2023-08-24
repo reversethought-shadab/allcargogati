@@ -792,7 +792,14 @@ section {
     top: 100px;
     width: 50%;
   }
-
+  .btn-card {
+    padding: 11px 29px;
+    top: 300px;
+    left: 63px;}
+    .clean .overlay span:nth-child(2) {
+      top: 25%;
+      font-size: 15px;
+  }
   .left {
     padding-left: 15px;
   }
@@ -989,6 +996,14 @@ section {
     width: 80vw;
     right: 6px;
   }
+  .clean .overlay span:nth-child(2) {
+    font-size: 15px;
+    top: 26%;
+}
+.btn-card {
+  top: 72%;
+  left: 27%;
+}
   .counter {
     border-top: none !important;
     border-right: none !important ;
