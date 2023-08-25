@@ -1,0 +1,739 @@
+
+/* New Hero CSS */
+.hero_area{
+    padding: 0;
+    height: 95vh;
+    min-height: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero_area .left_hero_sec,
+  .hero_area .right_hero_sec{
+    flex: 0 0 50vw;
+    max-width: 50vw;
+    height: 100%;
+  }
+  
+  .hero_area .left_hero_sec{
+    background: #231F20;
+    position: relative;
+  }
+  
+  .hero_area .left_hero_sec .brand{
+    position: absolute;
+    top: 2.396vw;
+    left: 8.385vw;
+  }
+  
+  .hero_area .left_hero_sec .brand .logo{
+    display: flex;
+  }
+  
+  .hero_area .left_hero_sec .brand .logo img{
+    max-width: 12.188vw;
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content{
+    position: absolute;
+    top: 50%;
+    left: 8.385vw;
+    transform: translateY(-50%);
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content h3{
+    font-weight: 300;
+    font-size: 3.125vw;
+    line-height: 3.125vw;
+    color: #fff;
+    margin-bottom: 0;
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content h2{
+    font-weight: 700;
+    font-size: 4.375vw;
+    line-height: 4.375vw;
+    color: #fff;
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content .banner_btn{
+    width: 12.708vw;
+    height: 2.917vw;
+    background: transparent;
+    border: 0.052vw solid #fff;
+    border-radius: 12vw;
+    margin-top: 2.083vw;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content .banner_btn span{
+    font-size: 1.2vw;
+    color: #fff;
+    display: block;
+    margin-right: 0.521vw;
+  }
+  
+  .hero_area .left_hero_sec .left_hero_content .banner_btn svg{
+    width: 1.563vw;
+    height: 1.563vw;
+    color: #fff;
+  }
+  
+  .hero_area .right_hero_sec{
+    position: relative;
+  }
+  
+  
+  .hero_area .banner_img{
+    width: calc(50vw + 5.365vw);
+    position: absolute;
+    right: 0;
+    bottom: 10vh;
+  }
+  
+  .hero_area .banner_img img{
+    display: block;
+    width: 100%;
+  }
+  
+  .hero_area .banner_img::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.677vw;
+    height: 1.563vw;
+    width: 6.4vw;
+    background: #EA1C24;
+    display: block;
+  }
+  
+  .vertical_navabar{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 95vh;
+    z-index: 1;
+    width: 5.313vw;
+    background: #eff0f0;
+  }
+  
+  .vertical_navabar nav,
+  .vertical_navabar nav ul{
+    height: 100%;
+  }
+  
+  .vertical_navabar nav ul,
+  .vertical_navabar nav ul li{
+    list-style: none;
+  }
+  
+  .vertical_navabar nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding: 2.865vw 0;
+  }
+  
+  .vertical_navabar nav ul li{
+    text-align: center;
+    width: 5.313vw;
+    padding: 0.729vw 0;
+  }
+  
+  .vertical_navabar nav ul li img{
+    cursor: pointer;
+  }
+  
+  .vertical_navabar nav ul li span{
+    display: block;
+    text-transform: uppercase;
+    margin-top: 0.483vw;
+    line-height: 0.833vw;
+    font-size: 0.833vw;
+    text-align: center;
+    color: #6E7578;
+    cursor: pointer;
+  }
+  
+  .vertical_navabar nav ul li.active_link{
+    background: #58595B;
+  }
+  
+  .vertical_navabar nav ul li.active_link span{
+    color: #fff;
+  }
+  
+  .vertical_navabar nav ul li.link_one{
+    position: relative;
+  }
+  
+  .toogleMenu{
+    position: absolute;
+    left: 5.313vw;
+    top: 0;
+    width: 27.760vw;
+    background: #58595B;
+    padding: 3.125vw;
+  }
+  
+  .toogleMenu::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0.417vw;
+    background: #EB1C24;
+    right: 0;
+    top: 0;
+  }
+  
+  .accordion-item,
+  .accordion-item  button{
+    background: transparent;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .accordion-item  button{
+    padding: 0.833vw 0;
+  }
+  
+  .accordion-item  button:focus{
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .accordion-item  button::after{
+    display: none;
+  }
+  
+  .accordion-item  button .accordion_icon{
+    margin-top: 0;
+  }
+  
+  .accordion-item  button .accordion_txt,
+  .menu_heaing,
+  .menu_heaing a{
+    font-size: 1.356vw;
+    font-weight: 600;
+    margin-top: 0;
+    display: block;
+    margin-right: 0.260vw;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .accordion-item  button .toogle_menu_links{
+    font-size: 1.356vw;
+    font-weight: 600;
+    margin-top: 0;
+    display: block;
+    color: #fff;
+  }
+  
+  .accordion-item  button .accordion_icon svg{
+    width: 1.256vw;
+    height: 1.256vw;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .accordion-item  button[aria-expanded="false"] .minus_icon{
+    display: none;
+  }
+  
+  .accordion-item  button[aria-expanded="true"] .minus_icon{
+    display: block;
+  }
+  
+  .accordion-item  button[aria-expanded="true"] .plus_icon{
+    display: none;
+  }
+  
+  .accordion-item .accordion-collapse .accordion-body .inner_accordion_links{
+    padding-left: 1.302vw;
+  }
+  
+  .accordion-item .accordion-collapse .accordion-body .inner_accordion_links a{
+    display: block;
+    color: #fff;
+    font-size: 0.933vw;
+    font-weight: 600;
+    text-align: left;
+  }
+  
+  .toogleMenu .login_area{
+    border-top: 0.104vw solid #808083;
+    border-bottom: 0.104vw solid #808083;
+  }
+  
+  .toogleMenu .login_area,
+  .toogleMenu .enquire_area{
+    padding: 0.833vw 0;
+  }
+  
+  .toogleMenu .login_area h2,
+  .toogleMenu .enquire_area h2 a{
+    text-align: left;
+  }
+  
+  .toogleMenu .login_area .btn_grp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.781vw;
+  }
+  
+  .toogleMenu .login_area .btn_grp .login_typr_btn{
+    height: 2.240vw;
+    border: 0.052vw solid #808083;
+    background: transparent;
+    font-size: 0.833vw;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 0 0.781vw;
+    color: #fff;
+    border-radius: 1.563vw;
+  }
+  
+  .vertical_navabar nav ul li.link_two{
+    position: relative;
+  }
+  
+  .tracking_area{
+    position: absolute;
+    left: 5.313vw;
+    top: 0;
+    width: 41.667vw;
+    background: #58595B;
+    padding: 5.781vw;
+  }
+  
+  .tracking_area::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0.417vw;
+    background: #EB1C24;
+    right: 0;
+    top: 0;
+  }
+  
+  .close_modal{
+    position: absolute;
+    top: 0.781vw;
+    right: 1.250vw;
+    cursor: pointer;
+  }
+  
+  .close_modal svg{
+    height: 1.250vw;
+    width: 1.250vw;
+    color: #fff;
+  }
+  
+  .tracking_form h3{
+    color: #fff;
+    font-size: 1.5vw;
+    text-align: left;
+    margin-bottom: 1.563vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.052vw;
+  }
+  
+  .tracking_seletion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .tracking_seletion .track_radio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .tracking_seletion .track_radio .container_radio:nth-child(1){
+    margin-right: 0.983vw;
+  }
+  
+  /* The container */
+  .container_radio {
+    display: block;
+    position: relative;
+    padding-left: 1.823vw;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 0.833vw;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.250vw;
+    width: 1.250vw;
+    background-color:transparent !important;
+    border-radius: 50%;
+    border: 0.052vw solid #fff;
+    margin-top: 0 !important;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_radio:hover input ~ .checkmark {
+    background-color: #58595B;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container_radio input:checked ~ .checkmark {
+    background-color: #58595B;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container_radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container_radio .checkmark:after {
+       top: 50%;
+      left: 50%;
+    transform: translate(-50%, -50%);
+      width: 0.729vw;
+      height: 0.729vw;
+      border-radius: 50%;
+      background: white;
+  }
+  
+  .tracking_seletion .enter_no_textbox input{
+    height: 2.083vw;
+    border: 0.052vw solid #fff;
+    background: #fff;
+    font-size: 0.833vw;
+    outline: none;
+    padding: 0 0.781vw;
+    border-radius: 1.042vw;
+  }
+  
+  .tracking_seletion .enter_no_textbox input::placeholder{
+    font-size: 0.833vw;
+    color: #e6e6e6;
+  }
+  
+  .tracking_seletion .track_btn{
+    height: 1.875vw;
+    border-radius: 1.875vw;
+    padding: 0 0.729vw;
+    color: #fff;
+    background: #1780A1;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 0.729vw;
+  }
+  
+  .vertical_navabar nav ul li.link_three{
+    position: relative;
+  }
+  
+  .whatsapp_chat_area{
+    position: absolute;
+    left: 5.313vw;
+    top: 0;
+    width: 41.667vw;
+    background: #58595B;
+    display: flex;
+    align-items: center;
+  }
+  
+  .whatsapp_chat_area::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0.417vw;
+    background: #EB1C24;
+    right: 0;
+    top: 0;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area{
+    flex: 0 0 50%;
+    max-width: 50%;
+  
+  }
+  
+  .whatsapp_chat_area .genie_chat_area:nth-child(2){
+    border-right: 0.052vw solid #B6B8BA;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area a{
+    display: block;
+    display: flex;
+    align-items: end;
+    padding: 0 0 2.865vw;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area a img{
+    margin-top: -2.646vw;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area a div span:nth-child(1){
+    font-weight: 600;
+    font-size: 1.250vw;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area a div span:nth-child(2){
+    font-size: 0.729vw;
+    color: #fff;
+    margin-top: 0;
+    text-transform: capitalize;
+    margin-top: 0.483vw;
+    text-align: left;
+    font-weight: 200;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area .inner_chart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text{
+    margin-left: 0.729vw;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3{
+    font-weight: 600;
+    font-size: 1.250vw;
+    line-height: 1.250vw;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+  
+  .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span{
+    font-size: 0.729vw;
+    color: #fff;
+    margin-top: 0;
+    text-transform: capitalize;
+    margin-top: 0.2vw;
+    text-align: left;
+    font-weight: 200;
+  }
+  
+  @media (min-width: 992px) and (max-width: 1366px){
+    .hero_area,.vertical_navabar{
+      height: 80vh;
+    }
+  }
+  
+  @media (max-width: 991px){
+  
+    .hero_area .left_hero_sec .brand{
+      top: 30px;
+      left: 100px;
+    }
+  
+    .hero_area .left_hero_sec .brand .logo img{
+      max-width: 200px;
+    }
+  
+    .hero_area{
+      flex-wrap: wrap;
+    }
+  
+    .hero_area,
+    .hero_area .left_hero_sec{
+      height: 100%;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content,
+    .hero_area .banner_img{
+      position: unset;
+      transform: unset;
+    }
+  
+    .hero_area .left_hero_sec{
+      height: 600px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content{
+      padding: 0 50px 0 100px;
+      /* height: 600px; */
+    }
+  
+    .hero_area .left_hero_sec, .hero_area .right_hero_sec{
+      flex: 0 0 100vw;
+      max-width: 100vw;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content h3{
+      font-size: 50px;
+      line-height: 50px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content h2{
+      font-size: 74px;
+      line-height: 74px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn{
+      width: 200px;
+      height: 45px;
+      margin-top: 35px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn span{
+      font-size: 16px;
+      margin-right: 10px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn svg{
+      width: 26px;
+      height: 26px;
+    }
+  
+    .hero_area .banner_img{
+      width: 100vw;
+      margin: -130px auto 0;
+      padding: 0 0 0 100px;
+    }
+  
+    .hero_area .banner_img::after{
+      left: 100px;
+      width: 100px;
+    }
+  
+    .vertical_navabar{
+      height: 600px;
+      width: 70px;
+    }
+  
+  
+    .vertical_navabar nav ul li span{
+      font-size: 13px;
+      line-height: 15px;
+      margin-top: 8px;
+    }
+  }
+  
+  
+  
+  @media (max-width: 767px){
+    .hero_area .left_hero_sec .left_hero_content h3 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content h2 {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+  
+  @media (max-width: 767px){
+    .hero_area .left_hero_sec .left_hero_content h3 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content h2 {
+      font-size: 64px;
+      line-height: 64px;
+    }
+  }
+  
+  @media (max-width: 600px){
+    .hero_area .left_hero_sec .brand{
+      left: 80px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content{
+      padding: 0 15px 0 80px;
+    }
+  
+    .hero_area .banner_img{
+      padding: 0 0 0 80px;
+    }
+  
+    .hero_area .left_hero_sec{
+      height: 500px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn{
+      margin-top: 25px;
+      width: 150px;
+      height: 40px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn span{
+      font-size: 14px;
+    }
+  
+    .hero_area .left_hero_sec .left_hero_content .banner_btn svg{
+      width: 22px;
+      height: 22px;
+    }
+  
+    .hero_area .banner_img::after {
+      left: 80px;
+      width: 80px;
+    }
+  
+    .vertical_navabar{
+      height: 500px;
+      width: 55px;
+    }
+  
+    .vertical_navabar nav ul li img{
+      max-width: 32px;
+    }
+  
+    .vertical_navabar nav ul li span{
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+  
+  @media (max-width: 480px){
+    .hero_area .left_hero_sec .left_hero_content h3 {
+      font-size: 26px;
+      line-height: 26px;
+    }
+    .hero_area .left_hero_sec .left_hero_content h2 {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }

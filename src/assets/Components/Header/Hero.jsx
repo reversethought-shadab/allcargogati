@@ -1,222 +1,319 @@
 import React, { useState } from "react";
 import "./Hero.css";
+import "./main.css";
 import Button from "react-bootstrap/Button";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 import Countedup from "./Countedup";
 import CardHover from "./CardHover";
 const Hero = () => {
-
-  const [showServices, setShowServices] = useState(false);
-  const [showTools, setShowTools] = useState(false);
-
-  const toggleServices = () => {
-    setShowServices(!showServices);
-    setShowTools(false); // Close other dropdown
-  };
-
-  const toggleTools = () => {
-    setShowTools(!showTools);
-    setShowServices(false); // Close other dropdown
-  };
-
-  const closeDropdowns = () => {
-    setShowServices(false);
-    setShowTools(false);
-  };
-  const [activeItem, setActiveItem] = useState(null);
-
-  const handleItemClick = (itemName) => {
-    setActiveItem(itemName);
-
-  };
-  const sidebarItems = [
-    { id: 1, imageSrc: '/images/tracking-app.png', text: 'TRACK YOUR PARCEL' },
-    { id: 2, imageSrc: '/images/whatsap.png', text: 'CHAT WITH US' },
-    { id: 3, imageSrc: '/images/calculator.png', text: 'RATE & TRANSIT TIME' },
-    { id: 4, imageSrc: '/images/package.png', text: 'PICK UP REQUEST' },
-  ];
   const [showMenu, setShowMenu] = useState(false);
-
-  const menuHandle = () => {
-    setShowMenu(true);
-  }
-
-  const closeHandle = () => {
-    setShowMenu(false);
-  }
-  const [showChat, setShowChat] = useState(false);
-  const chatHandle = () => {
-    setShowChat(true);
-  }
-  const closeChatHandle = () => {
-    setShowChat(false);
-  }
-
   const [showTrack, setShowTrack] = useState(false);
-  const trackHandle = () => {
+  const [showChat, setShowChat] = useState(false);
+
+  const handleShowMenu = () => {
+    setShowMenu(true);
+    setShowTrack(false);
+    setShowChat(false);
+    
+  };
+
+  const handleShowTrack = () => {
     setShowTrack(true);
-  }
-  const closeTrack = () => {
+    setShowMenu(false);
+    setShowChat(false);
+  };
+
+  const handleShowChat = () => {
+    setShowChat(true)
+    setShowMenu(false);
     setShowTrack(false);
   }
-  const [selectedValue, setSelectedValue] = useState('docket');
 
-  const handleRadioChange = (event) => {
-    setSelectedValue(event.target.value);
+  const handleCloseMenu = () => {
+    setShowMenu(false);
   };
+
+  const handleCloseTrack = () => {
+    setShowTrack(false);
+  };
+
+  const handleCloseChat = () => {
+    setShowChat(false);
+  };
+
+
+  const menuUI = () => {
+    return (
+      <>
+        {showMenu && (
+          <div className="toogleMenu">
+            <Accordion>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>
+                  <span className="accordion_txt">Services</span>
+                  <span className="plus_icon accordion_icon">
+                    <span class="iconify" data-icon="mdi-light:plus"></span>
+                  </span>
+                  <span className="minus_icon accordion_icon">
+                    <span class="iconify" data-icon="mdi-light:minus"></span>
+                  </span>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="inner_accordion_links">
+                    <a href="#" className="sub_links">
+                      Express Distribution
+                    </a>
+                    <a href="#" className="sub_links">
+                      Retail Services
+                    </a>
+                    <a href="#" className="sub_links">
+                      Supply Chain Solutions
+                    </a>
+                    <a href="#" className="sub_links">
+                      Air Frieght
+                    </a>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item eventKey="1">
+                <Accordion.Header>
+                  <span className="accordion_txt">Tools</span>
+                  <span className="plus_icon accordion_icon">
+                    <span class="iconify" data-icon="mdi-light:plus"></span>
+                  </span>
+                  <span className="minus_icon accordion_icon">
+                    <span class="iconify" data-icon="mdi-light:minus"></span>
+                  </span>
+                </Accordion.Header>
+                <Accordion.Body>
+                  <div className="inner_accordion_links">
+                    <a href="#" className="sub_links">
+                      Express Distribution
+                    </a>
+                    <a href="#" className="sub_links">
+                      Retail Services
+                    </a>
+                    <a href="#" className="sub_links">
+                      Supply Chain Solutions
+                    </a>
+                    <a href="#" className="sub_links">
+                      Air Frieght
+                    </a>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item>
+                <Accordion.Header>
+                  <a href="#" className="toogle_menu_links">
+                    Media
+                  </a>
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item>
+                <Accordion.Header>
+                  <a href="#" className="toogle_menu_links">
+                    Careers
+                  </a>
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item>
+                <Accordion.Header>
+                  <a href="#" className="toogle_menu_links">
+                    Blogs
+                  </a>
+                </Accordion.Header>
+              </Accordion.Item>
+              <Accordion.Item>
+                <Accordion.Header>
+                  <a href="#" className="toogle_menu_links">
+                    About Us
+                  </a>
+                </Accordion.Header>
+              </Accordion.Item>
+            </Accordion>
+            <div className="login_area">
+              <h2 className="menu_heaing">Login</h2>
+              <div className="btn_grp">
+                <button type="button" className="login_typr_btn">
+                  Customer
+                </button>
+                <button type="button" className="login_typr_btn">
+                  Business Partner
+                </button>
+                <button type="button" className="login_typr_btn">
+                  Vendor
+                </button>
+              </div>
+            </div>
+            <div className="enquire_area">
+              <h2 className="menu_heaing">
+                <a href="#">Enquire Now</a>
+              </h2>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
+
+  const trackUI = () => {
+    return (
+      <>
+      {
+        showTrack && 
+        <div className="tracking_area">
+          <div className="close_modal" onClick={handleCloseTrack}>
+            <span class="iconify" data-icon="mi:close"></span>
+          </div>
+          <div className="tracking_form">
+            <h3>Track Your Parcel</h3>
+            <div className="tracking_seletion">
+              <div className="track_radio">
+                <label class="container_radio">
+                  Docket No.
+                  <input type="radio" checked="checked" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container_radio">
+                  Ref No.
+                  <input type="radio" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div className="enter_no_textbox">
+                <input placeholder="Enter No." />
+              </div>
+              <button className="track_btn">
+                Track
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+        
+      </>
+    );
+  };
+
+  const whatsAppUI = () => {
+    return(
+      <>
+      {
+        showChat && 
+        <div className="whatsapp_chat_area">
+          <div className="close_modal" onClick={handleCloseChat}>
+            <span class="iconify" data-icon="mi:close"></span>
+          </div>
+          <div className="genie_chat_area">
+            <a href="#">
+              <img src="images/reach.png" alt="Genie" />
+              <div>
+                <span>Chat with Genie</span>
+                <span>on WhatsApp</span>
+              </div>
+            </a>
+          </div>
+          <div className="genie_chat_area">
+            <div className="inner_chart">
+              <img src="images/comment.png" alt="Chat" />
+              <div className="chat_expert_text">
+                <h3>Ask an Expert</h3>
+                <span>Live chat assistance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+        
+      </>
+    )
+  }
+
   return (
     <>
-      {showChat && <div className="chatmenu">
-        <div className="chat-items">
-          <img src="/images/close.svg" className="close-butn" onClick={closeChatHandle} />
-         
-        </div>
-      </div>}
-      {/* menu section start here  */}
-      {showTrack && <div className="track">
-
-
-        <img src="/images/close.svg" className="close-butn" onClick={closeTrack} />
-        <h3 className="text-white fs-5 mx-5 my-5 py-5 track-font">TRACK YOUR PARCEL</h3>
-
-        <ul className="check-form">
-          <li className="check-items">
-            <input type="radio" name="name" id="one" value="docket"
-              checked={selectedValue === 'docket'}
-              onChange={handleRadioChange} />
-            <label htmlFor="one">Docket No.</label>
-
-            <div className="check"></div>
-          </li>
-
-          <li className="check-items">
-            <input type="radio" name="name" id="two" value="ref"
-              checked={selectedValue === 'ref'}
-              onChange={handleRadioChange} />
-            <label htmlFor="two">Ref No.</label>
-
-            <div className="check"></div>
-          </li>
-        </ul>
-        <form className="rounded-form mx-5">
-          <input
-            type="text"
-            placeholder={
-              selectedValue === 'docket' ? 'Enter Docket No.' : 'Enter Ref No.'
-            }
-          />
-          <button className="rounded-track-button">Track</button>
-        </form>
-
-      </div>}
-      {showMenu && <div className="menu">
-        <nav class="sidenavbar">
-          <ul class="navbar-nav ">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" onClick={toggleServices} href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Services
-              </a>
-              {showServices && (<div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <a class="dropdown-item" href="#">Express Distribution</a>
-                <a class="dropdown-item" href="#">Retail Services</a>
-                <a class="dropdown-item" href="#">Supply Chain Solutions</a>
-                <a class="dropdown-item" href="#">Air Freight</a>
-              </div>
-              )}
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" onClick={toggleTools} href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Tools
-              </a>
-              {showTools && (
-                <div class="dropdown-menu" aria-labelledby="toolsDropdown">
-                  <a class="dropdown-item" href="#">Tool 1</a>
-                  <a class="dropdown-item" href="#">Tool 2</a>
-                  <a class="dropdown-item" href="#">Tool 3</a>
-                  <a class="dropdown-item" href="#">Tool 4</a>
-                </div>)}
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Media</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Careers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-          </ul>
-          <div className="brde">
-            <li class="nav-item text-white list-unstyled">
-              <a class="login  nav-link" href="#">Login</a>
-            </li>
-            <div class="btn-group">
-              <button class="btn btn-rounded btn-secondary">Button 1</button>
-              <button class="btn btn-rounded btn-secondary">Button 2</button>
-              <button class="btn btn-rounded btn-secondary">Button 3</button>
-            </div>
-          </div>
-          <div className="explore">
-            <li className="nav-item text-white list-unstyled"><a href="" className="explore nav-links">Explore Now</a></li>
-          </div>
-        </nav>
-      </div>}
-
-      <div className="container-fluid">
-        <div className="row align-items-center">
-          <div className="col-lg-6 bg-dark d-flex">
-            <div className="sidenav">
-              <nav className="sidebar-nav-list">
-                <div className="mb-3 text-center">
-
-                  {showMenu ? <img src="/images/close.png" onClick={closeHandle} alt="" className="close-btn" /> : <img src="/images/hamburger.png" className="sidebar-nav-item" onClick={menuHandle} />}
-
-                </div>
-                <div className={`mt-4 sidebar-nav-item ${activeItem === 'TRACK YOUR PARCEL' ? 'active' : ''}`} onClick={() => { handleItemClick('TRACK YOUR PARCEL'); trackHandle(); }}>
-                  <img src="/images/tracking-app.png" alt="" />
-                  <p>TRACK YOUR PARCEL</p>
-                </div>
-                <div className={`mt-4 sidebar-nav-item border-right ${activeItem === 'CHAT WITH US' ? 'active' : ''}`} onClick={() => { handleItemClick('CHAT WITH US'); chatHandle(); }}>
-                  <img src="/images/whatsap.png" alt="" />
-                  <p>CHAT WITH US</p>
-                </div>
-                <div className={`mt-4 sidebar-nav-item ${activeItem === 'RATE & TRANSIT TIME' ? 'active' : ''}`} onClick={() => handleItemClick('RATE & TRANSIT TIME')}>
-                  <img src="/images/calculator.png" alt="" />
-                  <p>RATE & TRANSIT TIME</p>
-                </div>
-                <div className={`mt-4 sidebar-nav-item ${activeItem === 'PICK UP REQUEST' ? 'active' : ''}`} onClick={() => handleItemClick('PICK UP REQUEST')}>
-                  <img src="/images/package.png" alt="" />
-                  <p>PICK UP REQUEST</p>
-                </div>
-              </nav>
-            </div>
-            <div className="left">
-              <div className="logo">
-                <img src="/images/logo.png" alt="" />
-              </div>
-              <div className="content ">
-                <h1 className="text-white">Connecting India,</h1>
-                <h2 className="display-2 text-white fw-bold"> Seamlessly!</h2>
-                <Button variant="btn-hero btn-secondary rounded-5 mt-3">
-                  Get Started
+     
+      <section className="hero_area">
+        <div className="vertical_navabar">
+          <nav>
+            <ul>
+             <li className="link_one">
+                <img
+                  onClick={showMenu ? handleCloseMenu : handleShowMenu}
+                  src={showMenu ? "images/close.png" : "images/hamburger.png"}
+                  alt="Hamburger"
+                />
+                {menuUI()}
+              </li>
+              <li className={showTrack? "link_two active_link" : "link_two"}>
+                <div onClick={handleShowTrack}>
+                  <img src="images/tracking-app.png" alt="Tracking-app" />
                   <span>
-                    <img src="/images/right.png" className="arrow" alt="" />
+                    Track
+                    <br />
+                    Your
+                    <br />
+                    Parel
                   </span>
-                </Button>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6  ">
-           <div className="img-after">
+                </div>
+                {trackUI()}
+              </li>
+              <li className={showChat? "link_three active_link" : "link_three"}>
+                <div onClick={handleShowChat}>
+                  <img src="images/whatsapp.png" alt="whatsapp" />
+                  <span>
+                    Chat
+                    <br />
+                    With Us
+                    <br />
+                  </span>
+                </div>
+                {whatsAppUI()}
+              </li>
 
-            <img src="/images/main.png" className="main-img" alt="" />
-           </div>
+              <li className="link_four">
+                <img src="images/calculator.png" alt="calculator" />
+                <span>
+                  Rate &<br />
+                  Transit
+                  <br />
+                  Time
+                </span>
+              </li>
+
+              <li className="link_five">
+                <img src="images/package.png" alt="package" />
+                <span>
+                  Pick Up
+                  <br />
+                  Request
+                  <br />
+                </span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="left_hero_sec">
+          <div className="brand">
+            <a href="#" className="logo">
+              <img src="images/logo.png" alt="allcargo gati" />
+            </a>
+          </div>
+          <div className="left_hero_content">
+            <h3>Connecting India,</h3>
+            <h2>Seamlessly!</h2>
+            <button className="banner_btn">
+              <span>Get Started</span>
+              <span class="iconify" data-icon="iconoir:arrow-right"></span>
+            </button>
           </div>
         </div>
-      </div>
+        <div className="right_hero_sec">
+          <div className="banner_img">
+            <img src="images/main.png" alt="banner_img" />
+          </div>
+        </div>
+      </section>
       <div className="container-fluid py-3">
         <div className="row align-items-center second">
           <div className="col-lg-5 content-left">
@@ -255,51 +352,51 @@ const Hero = () => {
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
-                <img
+            <a href="">    <img
                   className=" w-100"
                   src="/images/card1.png"
                   alt="Card image cap"
-                />
+                /></a>
               </div>
               <div className="card-body pt-0 border-0">
-                <p className="card-text">
+             <a href="">  <p className="card-text">
                   Collaborating with key customers to use Electric Vehicles for
                   pick-ups and deliveries
-                </p>
+                </p> </a> 
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
-                <img
+               <a href=""> <img
                   className=" w-100"
                   src="/images/card2.png"
                   alt="Card image cap"
-                />
+                /></a>
               </div>
               <div className="card-body pt-0 border-0">
-                <p className="card-text">
+              <a href=""><p className="card-text">
                 Geared to convert our first and last mile fleet
 to alternate fuel by 2025 
-                </p>
+                </p></a>  
               </div>
             </div>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
-                <img
+              <a href="">  <img
                   className=" w-100"
                   src="/images/card3.png"
                   alt="Card image cap"
-                />
+                /></a>
               </div>
               <div className="card-body pt-0 border-0">
-                <p className="card-text">
+                <a href=""><p className="card-text">
                 Aligning with Allcargo Group’s overall objective
 of being carbon neutral by 2040 
-                </p>
+                </p></a>
               </div>
             </div>
           </div>
@@ -339,6 +436,7 @@ of being carbon neutral by 2040
     </div>
         </div>
       </section>
+    
     </>
   );
 };

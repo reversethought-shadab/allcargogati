@@ -14,7 +14,7 @@ const Countedup = () => {
       return () => clearInterval(interval);
     }, [count, value]);
 
-    return <span className="number">{count < value ? count : `${value}+`}</span>;
+    return <span className="number">{count < value ? count : `${value}`}</span>;
   };
 
   return (

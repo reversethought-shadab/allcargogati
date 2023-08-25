@@ -145,8 +145,8 @@ const Footer = () => {
                 </div>
                 <div className="copyright_sec">
                     <div className="container">
-                        <div className="copyright_box">
-                            <span>Copyright ©2023 Allcargo Gati Limited |  Disclaimer Terms & Conditions </span>
+                    <div className="copyright_box mx-5">
+                            <span>Copyright ©2023 Allcargo Gati Limited | <a href="" className='text-dark'>Disclaimer</a>  | <a href="" className='text-dark' >Terms & Conditions</a> </span>
                         </div>
                     </div>
                 </div>

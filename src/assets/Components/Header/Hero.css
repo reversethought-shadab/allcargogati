@@ -334,7 +334,7 @@ label {
 .video-container {
   position: relative;
   width: 100%;
-  height: 375px;
+  height: 430px;
   overflow: hidden;
 
 }
@@ -462,7 +462,7 @@ iframe {
 }
 
 .title {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   color: rgb(165 167 170);
   text-align: center;
@@ -471,7 +471,7 @@ iframe {
   border-right: 2px solid rgba(213, 215, 216, 0.753) !important;
 }
 .counter {
-  padding: 12px 130px;
+  padding: 12px 200px;
 }
 
 .counter p {
@@ -517,8 +517,10 @@ iframe {
   position: relative;
   top: -20px;
 }
-.pledge{
+.pledge {
   color: rgb(96 96 96);
+  font-size: 18px;
+  font-weight: 500;
 }
 .profile-card-5 h5 {
   color: #4e5e30;
