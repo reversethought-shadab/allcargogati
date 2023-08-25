@@ -3,6 +3,7 @@ import "./Hero.css";
 import Button from "react-bootstrap/Button";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Countedup from "./Countedup";
+import CardHover from "./CardHover";
 const Hero = () => {
 
   const [showServices, setShowServices] = useState(false);
@@ -68,18 +69,7 @@ const Hero = () => {
       {showChat && <div className="chatmenu">
         <div className="chat-items">
           <img src="/images/close.svg" className="close-butn" onClick={closeChatHandle} />
-          <div className="whatsapp relative ">
-            <img src="/images/reach.png" className="reach" alt="" />
-            <div className="genie">
-              <h5 className="text-white chat">Chat With Genie</h5>
-              <span className="text-white chat">on Whatsapp</span>
-            </div>
-          </div>
-          <div className="assistent">
-            <div className="expert">
-              <img src="/images/comment.png" alt="" />
-            </div>
-          </div>
+         
         </div>
       </div>}
       {/* menu section start here  */}
@@ -121,38 +111,6 @@ const Hero = () => {
       </div>}
       {showMenu && <div className="menu">
         <nav class="sidenavbar">
-          {/* <ul class="main-buttons">
-      <li className="fs-5">
-        Services
-      <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 2L13.8 10.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 6.17004V11H17.83" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        <ul className="hidden  ">
-          <li className="fs-5"><a href="" className="text-white">Express Distribution</a></li>
-          <li className="fs-5"><a href="" className="text-white">Retail Services</a> </li>
-          <li className="fs-5"><a href="" className="text-white">Supply Chain Solutions</a> </li>
-          <li className="fs-5"><a href="" className="text-white">Air Freight</a></li>
-        </ul>
-      </li>
-      <li className="fs-5">
-        Tools
-        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 2L13.8 10.2" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M13 6.17004V11H17.83" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        <ul class="hidden">
-          <li className="fs-5"><a href="" className="text-white">Tool1</a></li>
-          <li className="fs-5"><a href="" className="text-white">Tool2</a></li>
-          <li className="fs-5"><a href="" className="text-white">Tool3</a></li>
-        </ul>
-      </li>
-      <li className="fs-5"><a href="" className="text-white">Media</a>  </li>
-      <li className="fs-5"><a href="" className="text-white">Careers</a>  </li>
-      <li className="fs-5"><a href="" className="text-white">Blogs</a>  </li>
-      <li className="fs-5"><a href="" className="text-white">About Us</a>  </li>
-    <h4  className="border-top py-3 fs-5 mx-5"><a href="" className="text-white">Login</a></h4>
-      <div className="btn-group mx-5 pb-3">
-         <button type="button" className="btn btn-primary rounded-5">Costomer</button>
-    <button type="button" className="btn mx-3 btn-primary rounded-5 second-btn">Business Partner</button>
-    <button type="button" className="btn btn-primary rounded-5">Vendor</button>
-        </div>
-    </ul>
-    <h4 className="text-white mx-5 mb-5 fs-5 "><a href="" className="text-white">Enquire Now</a> </h4> */}
           <ul class="navbar-nav ">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" onClick={toggleServices} href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -251,13 +209,16 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 ">
+          <div className="col-lg-6  ">
+           <div className="img-after">
+
             <img src="/images/main.png" className="main-img" alt="" />
+           </div>
           </div>
         </div>
       </div>
-      <div className="container-fluid py-5">
-        <div className="row align-items-center">
+      <div className="container-fluid py-3">
+        <div className="row align-items-center second">
           <div className="col-lg-5 content-left">
             <p>
               Welcome to Gati Logistics, a pioneering name in seamless cargo
@@ -271,106 +232,31 @@ const Hero = () => {
               prosperous future.
             </p>
           </div>
-          <div className="col-lg-7">
-            <div className="icon-container">
-              <div className="image-container">
-                <img
-                  src="/images/box-img.jpg"
-                  className="video-thumbnail image "
-                />
-                <a href="https://youtu.be/7P_Bg-XKCGc">
-                  <div className="play-button"></div>
-                </a>
-              </div>
-            </div>
-          </div>
+          <div className="col-lg-7 frame-right">
+          <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/SjivVFxgAjI?si=0FORHunhgxW9QhPr?modestbranding=0&autohide=0&showinfo=0&controls=0&disablekb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+     </div>
         </div>
       </div>
       <Countedup />
-      <div className="container-fluid py-5">
-        <div className="row text-center">
-          <div className="col-lg-3 col-md-6 gy-3">
-            <div class="item clean">
-              <img src="/images/carg1.jpeg" className="img-fluid w-100 h-100" alt="image" />
-              <div class="overlay">
-                <span>EXPRESS
-                  DISTRIBUTION</span>
-                <span>Express Distribution offers direct
-                  route connectivity to all major
-                  locations in India, thereby helping
-                  you save on time </span>
-                <span></span>
-                <button className="btn-card">Know More</button>
-              </div>
-              <p className="image-title">   EXPRESS
-                DISTRIBUTION</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 gy-3">
-            <div class="item clean">
-              <img src="/images/carg2.jpeg" className="img-fluid w-100 h-100" alt="image" />
-              <div class="overlay">
-                <span>EXPRESS
-                  DISTRIBUTION</span>
-                <span>Express Distribution offers direct
-                  route connectivity to all major
-                  locations in India, thereby helping
-                  you save on time </span>
-                <span></span>
-                <button className="btn-card">Know More</button>
-              </div>
-              <p className="image-title"> EXPRESS DISTRIBUTION</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 gy-3">
-            <div class="item clean">
-              <img src="/images/carg3.webp" className="img-fluid w-100 h-100" alt="image" />
-              <div class="overlay">
-                <span>SUPPLY CHAIN SOLUTIONS</span>
-                <span>Express Distribution offers direct
-                  route connectivity to all major
-                  locations in India, thereby helping
-                  you save on time </span>
-                <span></span>
-                <button className="btn-card">Know More</button>
-              </div>
-              <p className="image-title">RETAIL SERVICES</p>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-6 gy-3">
-            <div class="item clean">
-              <img src="/images/carg4.webp" className="img-fluid w-100 h-100" alt="image" />
-              <div class="overlay">
-                <span>EXPRESS
-                  DISTRIBUTION</span>
-                <span>Express Distribution offers direct
-                  route connectivity to all major
-                  locations in India, thereby helping
-                  you save on time </span>
-                <span></span>
-                <button className="btn-card">Know More</button>
-              </div>
-              <p className="image-title">   GATI AIR</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <CardHover/>
       <div className="container py-5">
         <h2 className="text-center title">
           Our Pledge to a Sustainable Planet
         </h2>
-        <p className="text-center  justify-content-center py-3">
+        <p className="text-center  justify-content-center py-3 pledge">
           Driving positive change through sustainable practices, community
           empowerment, and
           <br />
           ethical standards. Committed to a better world.
         </p>
-        <div className="row py-3 ">
-          <div className="col-lg-4">
+        <div className="row py-3 gy-5">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
                 <img
-                  className="card-img-top w-100"
+                  className=" w-100"
                   src="/images/card1.png"
                   alt="Card image cap"
                 />
@@ -383,36 +269,36 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
                 <img
-                  className="card-img-top w-100"
-                  src="/images/card1.png"
+                  className=" w-100"
+                  src="/images/card2.png"
                   alt="Card image cap"
                 />
               </div>
               <div className="card-body pt-0 border-0">
                 <p className="card-text">
-                  Collaborating with key customers to use Electric Vehicles for
-                  pick-ups and deliveries
+                Geared to convert our first and last mile fleet
+to alternate fuel by 2025 
                 </p>
               </div>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-md-6 col-sm-12">
             <div class="card profile-card-5">
               <div class="card-img-block">
                 <img
-                  className="card-img-top w-100"
-                  src="/images/card1.png"
+                  className=" w-100"
+                  src="/images/card3.png"
                   alt="Card image cap"
                 />
               </div>
               <div className="card-body pt-0 border-0">
                 <p className="card-text">
-                  Collaborating with key customers to use Electric Vehicles for
-                  pick-ups and deliveries
+                Aligning with Allcargo Group’s overall objective
+of being carbon neutral by 2040 
                 </p>
               </div>
             </div>
@@ -420,46 +306,37 @@ const Hero = () => {
         </div>
       </div>
       <section className="work-porcess-area section">
-        <div className="container">
+        <div className="container-timeline container">
           <div className="section-header">
             <h2 className="text-white">Accolades that inspire us!</h2>
-            <p className="text-white">
+            <p className="text-white text-center">
               Our journey is enriched by the accolades received, motivating us
-              to keep pushing the boundaries of success.
+              to keep pushing  
+              <br />
+              the boundaries of success.
             </p>
           </div>
-          <div className="process-info">
-            <div className="row">
-              <div className="col-md-3">
-                <div className="single-process single-process-2 first text-center">
+          <div className="timeline">
+        <div className="round-box">
+            <p>Image Placeholder</p>
+        </div>
+        <div className="round-box">
+           <p>Image Placeholder</p>
+        </div>
+        <div className="date-box">
+           <p>2023</p>
+        </div>
+        <div className="round-box">
+           <p>Image Placeholder</p>
+        </div>
+        <div className="date-box">
+            <p>2022</p>
+        </div>
+        <div className="round-box">
+           <p>Image Placeholder</p>
+        </div>
 
-                  <img src="/images/package.png" alt="" />
-
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-process single-process-3 secend text-center">
-
-                  <img src="/images/package.png" alt="" />
-
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-process thard text-center">
-
-                  <img src="/images/package.png" alt="" />
-
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="single-process  last text-center">
-
-                  <img src="/images/package.png" alt="" />
-
-                </div>
-              </div>
-            </div>
-          </div>
+    </div>
         </div>
       </section>
     </>
