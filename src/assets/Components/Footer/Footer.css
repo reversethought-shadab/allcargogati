@@ -227,4 +227,25 @@ footer {
     .footer_row{
         flex-direction:column;
     }
+    .social-icons {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-evenly;
+    }
+    .ft_left {
+        display: inline-grid;
+    }
+    .search_btn {
+        height: 28px;
+        margin-top: 16px;
+        margin-bottom: -11px;
+        display: flex;
+        align-items: center;
+    }
+    .subs {
+        display: inline-grid;
+    }
+    .ft_left p {
+        margin-top: 12px;
+    }
 }

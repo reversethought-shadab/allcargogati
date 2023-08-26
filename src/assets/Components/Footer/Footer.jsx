@@ -10,7 +10,7 @@ const Footer = () => {
                         <div className="row footer-bottom-btm align-items-center">
                             <div className="col-lg-6 offset-2">
                                 <div className='ft_left' >
-                                    <div>
+                                    <div className='subs'>
                                         <span>SUBSCRIBE NOW</span>
                                         <p>To know more about Allcargo-Gati</p>
                                     </div>

@@ -208,7 +208,7 @@ const Hero = () => {
           <div className="genie_chat_area">
             <a href="#">
               <img src="images/reach.png" alt="Genie" />
-              <div>
+              <div className="gnie">
                 <span>Chat with Genie</span>
                 <span>on WhatsApp</span>
               </div>

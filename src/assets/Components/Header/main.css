@@ -551,19 +551,128 @@
     font-weight: 200;
   }
   
-  @media (min-width: 992px) and (max-width: 1366px){
+  @media  (max-width: 2060px){
+    .gnie {
+      display: flow-root;
+      position: absolute;
+      left: 13%;
+      top: 5vw;
+    }
+
+  }
+  @media  (max-width: 1660px){
+    .gnie {
+      display: flow-root;
+      position: absolute;
+      left: 16%;
+      top: 7vw;
+    }
+    .whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+      font-size: 1.009vw;}
+      .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+        font-size: 1.109vw;}
+        .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
+          font-weight: 600;
+          font-size: 1.550vw;
+          line-height: 1.550vw;}
+          .whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+            font-weight: 600;
+            font-size: 1.450vw;}
+  }
+  @media (min-width: 1361px) and (max-width: 1659px){
+    .gnie {
+      display: flow-root;
+      position: absolute;
+      left: 18%;
+      top: 8vw;
+  }
+  }
+  @media (min-width: 992px) and (max-width: 1360px){
     .hero_area,.vertical_navabar{
       height: 80vh;
     }
+    .whatsapp_chat_area .genie_chat_area a img {
+      margin-top: -3.646vw;
+  }
+  .whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+    font-size: 20px;
+}
+.gnie {
+  display: flow-root;
+  position: absolute;
+  left: 9vw;
+  top: 9vw;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+  font-size: 20px;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+  font-size: 1.129vw;
+  color: #fff;
+  margin-top: 0;
+  text-transform: capitalize;
+  margin-top: 1.289vw;
+  text-align: left;
+  font-weight: 200;
+}
+.inner_chart img {
+  height: 45px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
+  font-size: 20px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+  font-size: 1.429vw;
+  margin-top: 0.8vw;
+}
+.whatsapp_chat_area {
+  position: absolute;
+  left: 5.313vw;
+  top: 0;
+  width: 57.667vw;
+  background: #58595B;
+  display: flex;
+  align-items: center;
+}
   }
   
   @media (max-width: 991px){
-  
+    .toogleMenu {
+      position: absolute;
+      left: 6.313vw;
+      top: 0;
+      width: 59.76vw;
+      background: #58595B;
+      padding: 5.125vw;
+  }
+  .accordion-item button .accordion_txt, .menu_heaing, .menu_heaing a {
+    font-size: 3.356vw;
+    margin-top:9px;
+  }
+  .accordion-item button .accordion_icon svg {
+    width: 3.256vw;
+    height: 3.256vw;}
+    .accordion-item .accordion-collapse .accordion-body .inner_accordion_links a {
+      margin-top: 13px;
+      font-size: 2.133vw;
+  }
+  .accordion-item button .toogle_menu_links {
+    font-size: 2.956vw;}
     .hero_area .left_hero_sec .brand{
       top: 30px;
       left: 100px;
     }
-  
+    .toogleMenu .login_area .btn_grp .login_typr_btn {
+      height: 3.24vw;
+      font-size: 19px;
+      margin-top: 10px;
+      padding: 0 3.101vw;
+  }
+  .toogleMenu .login_area .btn_grp {
+    display: grid;}
+    .accordion-item button {
+      padding: 1.833vw 0;
+  }
     .hero_area .left_hero_sec .brand .logo img{
       max-width: 200px;
     }
@@ -647,7 +756,84 @@
       line-height: 15px;
       margin-top: 8px;
     }
+    .container_radio input:checked ~ .checkmark {
+      height: 14px;
+      width: 14px;
   }
+  .tracking_area {
+    left: 6.313vw;
+    width: 37.667vw;
+    padding: 5.781vw;
+}
+.tracking_seletion .track_radio .container_radio:nth-child(1) {
+  margin-right: 1.983vw;
+}
+.tracking_form h3 {
+  font-size: 2.5vw;
+  font-weight: 400;
+}
+.tracking_seletion {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+}
+.tracking_seletion .enter_no_textbox input {
+  height: 4.083vw;
+  font-size: 1.833vw;
+  width: 27vw;
+  margin-top: 12px;
+  padding: 0 0.781vw;
+  border-radius: 2.042vw;
+}
+.tracking_seletion .track_btn {
+  height: 3.875vw;
+  padding: 1vw 0.729vw;
+  transform: translateX(63px);
+  margin-top: 12px;
+  width: 10vw;
+  line-height: 0px;
+  font-size: 16px;
+}
+.container_radio {
+  display: block;
+  position: relative;
+  padding-left: 1.823vw;
+  line-height: 14px;
+  font-size: 1.833vw;
+}
+.close_modal svg {
+  height: 3.25vw;
+  width: 2.25vw;
+  color: #fff;
+}
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -3.646vw;
+}
+.whatsapp_chat_area{
+  width: 52.667vw;
+  left: 6.313vw;
+}
+.gnie{
+  display: flow;
+    position: absolute;
+    left: 9vw;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+  font-size: 20px;}
+  .whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+    font-size: 1.429vw;}
+    .whatsapp_chat_area .genie_chat_area .inner_chart {
+      display: grid;}
+      .inner_chart img {
+        height: 86px;
+    }
+    .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+      font-size: 1.429vw;
+      margin-top: 0.8vw;
+  }
+  .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
+    font-size: 20px;}
+}
   
   
   
@@ -656,7 +842,38 @@
       font-size: 45px;
       line-height: 45px;
     }
-  
+    .toogleMenu {
+      position: absolute;
+      left: 7.313vw;
+      top: 0;
+      width: 59.76vw;
+      background: #58595B;
+      padding: 5.125vw;
+  }
+  .accordion-item button .accordion_txt, .menu_heaing, .menu_heaing a {
+    font-size: 4.356vw;
+    margin-top: 1px;
+}
+.toogleMenu .login_area .btn_grp .login_typr_btn {
+  height: 5.24vw;
+  line-height: 2px;
+  font-size: 16px;
+  border-radius: 2.563vw;
+  margin-top: 10px;
+  text-transform: capitalize;
+  padding: 2vw 3.101vw;
+}
+.accordion-item .accordion-collapse .accordion-body .inner_accordion_links a {
+  margin-top: 9px;
+  font-size: 3.133vw;
+}
+.accordion-item button .toogle_menu_links {
+  font-size: 3.956vw;
+  margin-top: 2px;
+}
+.accordion-item button {
+  padding: 1.833vw 0;
+}
     .hero_area .left_hero_sec .left_hero_content h2 {
       font-size: 64px;
       line-height: 64px;
@@ -673,13 +890,69 @@
       font-size: 64px;
       line-height: 64px;
     }
+    .tracking_area {
+      left: 7.313vw;
+      width: 41.667vw;
+      padding: 5.781vw;
+  }
+  .tracking_form h3 {
+    font-size: 2.9vw;
+}
+.tracking_seletion .track_btn {
+  padding: 1vw 0.729vw;
+  transform: translateX(45px);
+  width: 13vw;
+}
+.container_radio {
+  padding-left: 2.823vw;
+  line-height: 14px;
+  font-size: 17px;
+}
+.tracking_seletion .enter_no_textbox input {
+  
+  font-size: 1.833vw;
+  width: 27vw;
+}
+.whatsapp_chat_area {
+  width: 69.667vw;
+  left: 7.313vw;
+  /* height: 219px; */
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+  font-size: 14px;
+  margin-top: 12px;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+  font-size: 14px;
+}
+.accordion-item button .accordion_icon svg {
+  width: 5.256vw;
+  height: 4.256vw;
+}
+.toogleMenu .login_area .btn_grp {
+  display: grid;
+  padding: 11px 0px;
+}
   }
   
   @media (max-width: 600px){
     .hero_area .left_hero_sec .brand{
       left: 80px;
     }
-  
+  .toogleMenu{
+    width: 74.76vw;
+  }
+  .accordion-item button .accordion_txt, .menu_heaing, .menu_heaing a {
+    font-size: 4.756vw;
+    margin-top: 2px;
+}
+.accordion-item button .toogle_menu_links {
+  font-size: 4.756vw;
+  margin-top: 2px;
+}
+.accordion-item button {
+  padding: 1.833vw 0;
+}
     .hero_area .left_hero_sec .left_hero_content{
       padding: 0 15px 0 80px;
     }
@@ -725,6 +998,74 @@
       font-size: 11px;
       line-height: 13px;
     }
+    .close_modal svg {
+      height: 2.25vw;
+      width: 2.25vw;
+      color: #fff;
+  }
+  .tracking_area {
+    left: 8.313vw;
+    width: 49.667vw;
+    padding: 5.781vw;
+}
+.tracking_form h3 {
+  font-size: 3.5vw;
+}
+.tracking_seletion .enter_no_textbox input {
+  font-size: 2.833vw;
+  width: 38vw;
+  padding: 2vw 0.781vw;
+}
+.tracking_seletion .track_btn {
+  padding: 3vw 0.729vw;
+  transform: translateX(43px);
+  width: 16vw;
+  border-radius: 2.875vw;
+}
+.whatsapp_chat_area .genie_chat_area {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.whatsapp_chat_area {
+  width: 82.667vw;
+  left: 8.313vw;
+  height: 219px;
+}
+.whatsapp_chat_area .genie_chat_area a {
+  display: block;
+  align-items: end;
+  padding: 0 0 2.865vw;
+}
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -34.646vw;
+  max-width: 100%;
+}
+.gnie {
+  margin-top: 24px;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+  font-size: 14px;
+  margin-top: 12px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart {
+  display: block;
+}
+.inner_chart img {
+  object-fit: scale-down;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+  font-size: 14px;
+  margin-top: 12px;
+  margin-left: 37px;
+}
+.accordion-item button .accordion_icon svg {
+  width: 6.256vw;
+  height: 5.256vw;
+}
+.toogleMenu .login_area .btn_grp {
+  display: grid;
+  padding: 11px 10px;
+}
   }
   
   @media (max-width: 480px){
@@ -732,8 +1073,164 @@
       font-size: 26px;
       line-height: 26px;
     }
+    .toogleMenu {
+      width: 80.76vw;
+      left: 9.093vw;
+    }
     .hero_area .left_hero_sec .left_hero_content h2 {
       font-size: 36px;
       line-height: 36px;
     }
+    .tracking_area {
+      left: 9.313vw;
+      width: 54.667vw;
+      padding: 4.781vw;
+    }
+    .close_modal svg {
+      height: 4.25vw;
+      width: 4.25vw;
+    color: #fff;
+}
+.tracking_form h3 {
+  font-size: 4.0vw;
+}
+.tracking_seletion .enter_no_textbox input {
+  font-size: 3.233vw;
+  width: 43vw;
+  border-radius: 4.042vw;
+  height: 7.083vw;
+  padding: 2vw 0.781vw;
+}
+.tracking_seletion .track_btn {
+  padding: 3vw 0.729vw;
+  transform: translateX(43px);
+  width: 19vw;
+  border-radius: 2.875vw;
+}
+.whatsapp_chat_area {
+  width: 84.667vw;
+  left: 9.313vw;
+  height: 235px;
+}
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -34.646vw;
+  max-width: 74%;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+  font-size: 16px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
+  font-size: 16px;
+}
+.accordion-item button .accordion_icon svg {
+  width: 6.256vw;
+  height: 5.256vw;
+}
+.accordion-item .accordion-collapse .accordion-body .inner_accordion_links a {
+  margin-top: 9px;
+  font-size: 3.633vw;
+}
+.toogleMenu .login_area .btn_grp {
+  display: grid;
+  padding: 11px 9px;
+}
   }
+@media (max-width: 380px){
+  .tracking_area {
+    left: 11.313vw;
+    width: 65.667vw;
+    padding: 4.781vw;
+}
+.hero_area .left_hero_sec .brand {
+  top: 30px;
+  left: 65px;
+}
+.hero_area .left_hero_sec .brand .logo img {
+  max-width: 154px;
+}
+.hero_area .left_hero_sec .brand {
+  top: 30px;
+  left: 31px;
+}
+.round-box {
+  height: 160px;
+  margin-top: 25px;}
+.tracking_form h3 {
+  font-size: 5.0vw;
+}
+.tracking_seletion .enter_no_textbox input {
+  font-size: 4.233vw;
+  width: 55vw;
+  border-radius: 4.042vw;
+  height: 8.083vw;
+  padding: 3vw 0.781vw;
+}
+.tracking_seletion .track_radio .container_radio:nth-child(1) {
+  margin-right: 8.983vw;
+}
+.tracking_seletion .track_btn {
+  padding: 4vw 0.729vw;
+  transform: translateX(49px);
+  width: 26vw;
+  border-radius: 3.875vw;
+}
+.toogleMenu {
+  width: 81.76vw;
+  left: 11.093vw;
+}
+.container_radio {
+  padding-left: 4.823vw;
+  line-height: 14px;
+  font-size: 13px;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
+  font-size: 12px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
+  font-size: 11px;
+}
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -54.646vw;
+  max-width: 90%;
+}
+.gnie {
+  left: 6vw;
+  margin: 0;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+  font-size: 11px;
+  margin-top: 12px;
+  margin-left: 22px;
+}
+.whatsapp_chat_area {
+  width: 79.667vw;
+  left: 11.313vw;
+  height: 199px;
+}
+.vertical_navabar nav ul li {
+  text-align: center;
+  width: 8.313vw;
+  padding: 0.729vw 0;
+}
+.accordion-item button .accordion_icon svg {
+  width: 10.256vw;
+  height: 5.256vw;
+}
+.toogleMenu .login_area .btn_grp {
+  display: grid;
+  padding: 12px 0px;
+}
+.toogleMenu .login_area .btn_grp .login_typr_btn {
+  height: 8.24vw;
+  line-height: 2px;
+  font-size: 17px;
+  border-radius: 3.563vw;
+  margin-top: 10px;
+  text-transform: capitalize;
+  padding: 2vw 3.101vw;
+}
+.accordion-item .accordion-collapse .accordion-body .inner_accordion_links a {
+  margin-top: 9px;
+  font-size: 4.133vw;
+}
+}

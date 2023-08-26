@@ -12,9 +12,9 @@
 a {
   text-decoration: none;
 }
-svg {
+/* svg {
   transform: rotate(180deg);
-}
+} */
 
 .sidenavbar {
   position: absolute;
@@ -337,6 +337,10 @@ label {
   height: 430px;
   overflow: hidden;
 
+}
+.banner_btn:hover{
+  background-color: rgb(88 89 91);
+  color: #231F20;
 }
 .second{
   display:flex;
