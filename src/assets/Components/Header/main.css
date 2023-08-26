@@ -918,6 +918,10 @@
   left: 7.313vw;
   /* height: 219px; */
 }
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -3.646vw;
+  height: 186px;
+}
 .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
   font-size: 14px;
   margin-top: 12px;
@@ -933,6 +937,13 @@
   display: grid;
   padding: 11px 0px;
 }
+.gnie {
+  display: flow;
+  position: absolute;
+  left: 12vw;
+  top: 61%;
+}
+
   }
   
   @media (max-width: 600px){
@@ -1041,8 +1052,12 @@
   max-width: 100%;
 }
 .gnie {
-  margin-top: 24px;
+  margin-top: -4px;
+  left: 7vw;
 }
+.whatsapp_chat_area .genie_chat_area a img {
+  margin-top: -26.646vw;
+  max-width: 100%;}
 .whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
   font-size: 14px;
   margin-top: 12px;
