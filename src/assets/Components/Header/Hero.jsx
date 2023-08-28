@@ -135,13 +135,13 @@ const Hero = () => {
             <div className="login_area">
               <h2 className="menu_heaing">Login</h2>
               <div className="btn_grp">
-                <button type="button" className="login_typr_btn">
+                <button type="button" className="login_typr_btn ">
                   Customer
                 </button>
-                <button type="button" className="login_typr_btn">
+                <button type="button" className="login_typr_btn ">
                   Business Partner
                 </button>
-                <button type="button" className="login_typr_btn">
+                <button type="button" className="login_typr_btn ">
                   Vendor
                 </button>
               </div>

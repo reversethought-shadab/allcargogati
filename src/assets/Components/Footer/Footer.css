@@ -49,7 +49,12 @@ footer {
     color: gray;
     transition: 0.5s;
 }
-
+.ft_bottom li a:hover {
+    color: #1780A1 !important;
+}
+.copyright_box a:hover{
+    color: #1780A1 !important;
+}
 .footer-btm ul {
     display: flex;
     justify-content: space-between;

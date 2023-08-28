@@ -224,11 +224,24 @@
     font-weight: 600;
     margin-top: 0;
     display: block;
-    margin-right: 0.260vw;
+    cursor: pointer;
+    margin-right: 0.26vw;
     color: #fff;
     text-transform: capitalize;
+}
+.menu_heaing:hover{
+
+  color: #1780A1 !important;
+}
+.menu_heaing a:hover{
+    color: #1780A1 !important;
   }
-  
+  .accordion-item a:hover{
+    color: #1780A1 !important;
+  }
+  .accordion_txt:hover{
+    color: #1780A1 !important;
+  }
   .accordion-item  button .toogle_menu_links{
     font-size: 1.356vw;
     font-weight: 600;
@@ -301,7 +314,10 @@
     color: #fff;
     border-radius: 1.563vw;
   }
-  
+  .login_typr_btn:hover{
+    background-color: #1780A1 !important;
+    border: 0.052vw solid #1780A1 !important;
+  }
   .vertical_navabar nav ul li.link_two{
     position: relative;
   }
@@ -384,7 +400,10 @@
     opacity: 0;
     cursor: pointer;
   }
-  
+  .hero_area .left_hero_sec .left_hero_content .banner_btn:hover{
+    background-color: #1780A1 !important;
+    border: 0.052vw solid #1780A1;
+  }
   /* Create a custom radio button */
   .checkmark {
     position: absolute;
@@ -447,17 +466,23 @@
   }
   
   .tracking_seletion .track_btn{
-    height: 1.875vw;
+    height: 1.885vw;
     border-radius: 1.875vw;
-    padding: 0 0.729vw;
+    padding: 0 1vw;
     color: #fff;
-    background: #1780A1;
+    align-items: center;
+    background: transparent;
     outline: none;
     box-shadow: none;
-    border: none;
+    border: 0.052vw solid #B6B8BA;
     font-size: 0.729vw;
   }
-  
+  .tracking_seletion .track_btn:hover {
+    
+    border: 0.052vw solid #1780A1;
+    color: #fff;
+    background: #1780A1;
+}
   .vertical_navabar nav ul li.link_three{
     position: relative;
   }
@@ -717,7 +742,7 @@
       font-size: 74px;
       line-height: 74px;
     }
-  
+    
     .hero_area .left_hero_sec .left_hero_content .banner_btn{
       width: 200px;
       height: 45px;
