@@ -1190,7 +1190,7 @@
   border-radius: 3.875vw;
 }
 .toogleMenu {
-  width: 81.76vw;
+  width: 74.76vw;
   left: 11.093vw;
 }
 .container_radio {
@@ -1199,10 +1199,19 @@
   font-size: 13px;
 }
 .whatsapp_chat_area .genie_chat_area a div span:nth-child(1) {
-  font-size: 12px;
+  font-size: 11px;
 }
 .whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text h3 {
   font-size: 11px;
+}
+.whatsapp_chat_area .genie_chat_area a div span:nth-child(2) {
+  font-size: 11px;
+  margin-top: 8px;
+}
+.whatsapp_chat_area .genie_chat_area .inner_chart .chat_expert_text span {
+  font-size: 11px;
+  margin-top: 9px;
+  margin-left: 14px;
 }
 .whatsapp_chat_area .genie_chat_area a img {
   margin-top: -52.646vw;
@@ -1218,9 +1227,12 @@
   margin-left: 22px;
 }
 .whatsapp_chat_area {
-  width: 79.667vw;
+  width: 72.667vw;
   left: 11.313vw;
   height: 199px;
+}
+.whatsapp_chat_area .genie_chat_area a img {
+  height: 154px;
 }
 .vertical_navabar nav ul li {
   text-align: center;
