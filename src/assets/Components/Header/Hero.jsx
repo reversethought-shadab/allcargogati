@@ -7,6 +7,286 @@ import Accordion from "react-bootstrap/Accordion";
 import Countedup from "./Countedup";
 import CardHover from "./CardHover";
 const Hero = () => {
+  const gati = [
+    {
+      tile: "Express Distribution",
+      projectLink: "https://www.gatikwe.com/our-services/express-distribution/",
+    },
+    {
+      
+      title: "Retail Services",
+      projectLink: "https://www.gatikwe.com/our-services/special-services/bike-express/",
+    },
+    {
+      
+      title: "Supply Chain Solutions",
+      projectLink: "https://www.gati.com/supply-chain-logistics-solutions/",
+    },
+    {
+      
+      title: "Air Freight",
+      projectLink: "https://www.gatikwe.com/air-freight/",
+    },
+    {
+      
+      title: "Calculate Rate & Transit Time",
+      projectLink: "https://www.gati.com/shipping-cost-calculator/",
+    },
+    {
+      
+      title: "ESS Matrix",
+      projectLink: "https://www.gati.com/pdf/ESS_matrix.pdf",
+    },
+    {
+      
+      title: "Claim Registration",
+      projectLink: "https://www.gati.com/claims-process/",
+    },
+    {
+      
+      title: "Convert Weight/Volume",
+      projectLink: "https://www.gatikwe.com/tools/convert-weight-volume/",
+    },
+    {
+      
+      title: "View Fuel & Diesel Surcharge",
+      projectLink: "https://www.gati.com/tools/view-fuel-diesel-surcharge/",
+    },
+    {
+      
+      title: "Pin Code Serviceability",
+      projectLink: "https://www.gati.com/contact-us/locate-us/",
+    },
+    {
+      
+      title: "Prohibited Goods fro Shipping",
+      projectLink: "https://www.gatikwe.com/tools/prohibited-goods-for-shipping/",
+    },
+    {
+      
+      title: "Dowload GST Invoice",
+      projectLink: "https://www.gati.com/our-services/gst-solutions/",
+    },
+    {
+      
+      title: "Media",
+      projectLink: "https://www.gati.com/media-center/press-coverages/",
+    },
+    {
+      
+      title: "Career",
+      projectLink: "https://www.gati.com/careers/working-with-gati/",
+    },
+    {
+      
+      title: "Blogs",
+      projectLink: "https://www.gatikwe.com/blog/",
+    },
+    {
+      
+      title: "About Us",
+      projectLink: "https://www.gatikwe.com/about-us/gati-kwe-profile/",
+    },
+    {
+      
+      title: "Customer Login",
+      projectLink: "https://www.gati.com/customer-portal/",
+    },
+    {
+      
+      title: "Vendor Login",
+      projectLink: "https://www.gati.com/partnerlogin/index.jsp",
+    },
+    {
+      
+      title: "Business Partner Login",
+      projectLink: "https://www.gati.com/GatiBP/index.jsp",
+    },
+    {
+      
+      title: "Enquire Now",
+      projectLink: "https://www.gati.com/contact-us/contact-details/",
+    },
+    {
+      
+      title: "Genie",
+      projectLink: "https://api.whatsapp.com/send?phone=917400012000&text=Hi",
+    },
+    {
+      
+      title: "Track Your Parcel",
+      projectLink: "To be API integrated",
+    },
+    {
+      
+      title: "Calculate Rate & Transit Time",
+      projectLink: "https://www.gati.com/shipping-cost-calculator/",
+    },
+    
+    {
+      
+      title: "Pickup Request",
+      projectLink: "https://www.gati.com/courier-pickup-request/",
+    },
+    {
+      
+      title: "Collaborating with key customers",
+      projectLink: "New pages",
+    },
+    {
+      
+      title: "Geared to covert our first and last mile",
+      projectLink: "New pages",
+    },
+    {
+      
+      title: "Group's overall objective",
+      projectLink: "New pages",
+    },
+     
+  ];
+  const gatikwe = [
+    {
+      tile: "Express Distribution",
+      projectLink: "https://www.gatikwe.com/our-services/express-distribution/",
+    },
+    {
+      
+      title: "Retail Services",
+      projectLink: "https://www.gatikwe.com/our-services/special-services/bike-express/",
+    },
+    {
+      
+      title: "Supply Chain Solutions",
+      projectLink: "https://www.gati.com/supply-chain-logistics-solutions/",
+    },
+    {
+      
+      title: "Air Freight",
+      projectLink: "https://www.gatikwe.com/air-freight/",
+    },
+    {
+      
+      title: "Calculate Rate & Transit Time",
+      projectLink: "https://www.gati.com/shipping-cost-calculator/",
+    },
+    {
+      
+      title: "ESS Matrix",
+      projectLink: "https://www.gati.com/pdf/ESS_matrix.pdf",
+    },
+    {
+      
+      title: "Claim Registration",
+      projectLink: "https://www.gati.com/claims-process/",
+    },
+    {
+      
+      title: "Convert Weight/Volume",
+      projectLink: "https://www.gatikwe.com/tools/convert-weight-volume/",
+    },
+    {
+      
+      title: "View Fuel & Diesel Surcharge",
+      projectLink: "https://www.gati.com/tools/view-fuel-diesel-surcharge/",
+    },
+    {
+      
+      title: "Pin Code Serviceability",
+      projectLink: "https://www.gati.com/contact-us/locate-us/",
+    },
+    {
+      
+      title: "Prohibited Goods fro Shipping",
+      projectLink: "https://www.gatikwe.com/tools/prohibited-goods-for-shipping/",
+    },
+    {
+      
+      title: "Dowload GST Invoice",
+      projectLink: "https://www.gati.com/our-services/gst-solutions/",
+    },
+    {
+      
+      title: "Media",
+      projectLink: "https://www.gati.com/media-center/press-coverages/",
+    },
+    {
+      
+      title: "Career",
+      projectLink: "https://www.gati.com/careers/working-with-gati/",
+    },
+    {
+      
+      title: "Blogs",
+      projectLink: "https://www.gatikwe.com/blog/",
+    },
+    {
+      
+      title: "About Us",
+      projectLink: "https://www.gatikwe.com/about-us/gati-kwe-profile/",
+    },
+    {
+      
+      title: "Customer Login",
+      projectLink: "https://www.gati.com/customer-portal/",
+    },
+    {
+      
+      title: "Vendor Login",
+      projectLink: "https://www.gati.com/partnerlogin/index.jsp",
+    },
+    {
+      
+      title: "Business Partner Login",
+      projectLink: "https://www.gati.com/GatiBP/index.jsp",
+    },
+    {
+      
+      title: "Enquire Now",
+      projectLink: "https://www.gati.com/contact-us/contact-details/",
+    },
+    {
+      
+      title: "Genie",
+      projectLink: "https://api.whatsapp.com/send?phone=917400012000&text=Hi",
+    },
+    {
+      
+      title: "Track Your Parcel",
+      projectLink: "To be API integrated",
+    },
+    {
+      
+      title: "Calculate Rate & Transit Time",
+      projectLink: "https://www.gati.com/shipping-cost-calculator/",
+    },
+    
+    {
+      
+      title: "Pickup Request",
+      projectLink: "https://www.gati.com/courier-pickup-request/",
+    },
+    {
+      
+      title: "Collaborating with key customers",
+      projectLink: "New pages",
+    },
+    {
+      
+      title: "Geared to covert our first and last mile",
+      projectLink: "New pages",
+    },
+    {
+      
+      title: "Group's overall objective",
+      projectLink: "New pages",
+    },
+    
+    
+    
+   
+  ];
+
   const [showMenu, setShowMenu] = useState(false);
   const [showTrack, setShowTrack] = useState(false);
   const [showChat, setShowChat] = useState(false);
@@ -88,7 +368,7 @@ const Hero = () => {
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="inner_accordion_links">
-                    <a href="#" className="sub_links">
+                    <a href="#"  className="sub_links">
                       Express Distribution
                     </a>
                     <a href="#" className="sub_links">
@@ -112,7 +392,7 @@ const Hero = () => {
               </Accordion.Item>
               <Accordion.Item>
                 <Accordion.Header>
-                  <a href="#" className="toogle_menu_links">
+                  <a href="#" title="" className="toogle_menu_links">
                     Careers
                   </a>
                 </Accordion.Header>
