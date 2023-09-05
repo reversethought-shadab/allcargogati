@@ -645,6 +645,11 @@ section {
    align-items: center;
    left: 18px;
 }
+
+.others_body{
+  display: none;
+}
+
 @media only screen and (max-width: 1199px) {
   .main-img {
     top: 100px;

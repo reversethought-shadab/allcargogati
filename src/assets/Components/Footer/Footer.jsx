@@ -45,7 +45,7 @@ const Footer = () => {
                                     <p>SERVICES </p>
                                     <ul>
                                         <li>
-                                            <a href="">Express Distribution</a>
+                                            <a href="https://www.gatikwe.com/our-services/express-distribution/">Express Distribution</a>
                                         </li>
                                         <li>
                                             <a href="">End to End Logistics</a>
@@ -62,10 +62,10 @@ const Footer = () => {
                                         <p>TOOLS</p>
                                         <ul >
                                             <li>
-                                                <a href="">ESS Matrix</a>
+                                                <a href="https://www.gati.com/pdf/ESS_matrix.pdf">ESS Matrix</a>
                                             </li>
                                             <li>
-                                                <a href="">Fuel & Diesel Surcharge</a>
+                                                <a href="https://www.gati.com/tools/view-fuel-diesel-surcharge/">Fuel & Diesel Surcharge</a>
                                             </li>
                                             <li>
                                                 <a href="">Track Your Shipment</a>
@@ -75,7 +75,7 @@ const Footer = () => {
                                     </div>
                                     <div className="footer_box">
                                         <ul>
-                                            <li><a href="">Rate & Transit Time Calculator</a></li>
+                                            <li><a href="https://www.gati.com/shipping-cost-calculator/">Rate & Transit Time Calculator</a></li>
                                             <li><a href="">Track Your Shipment</a></li>
                                         </ul>
                                     </div>
@@ -89,13 +89,13 @@ const Footer = () => {
                                             <a href="">Press Release</a>
                                         </li>
                                         <li>
-                                            <a href="">Press Coverages</a>
+                                            <a href="https://www.gati.com/media-center/press-coverages/">Press Coverages</a>
                                         </li>
                                         <li>
                                             <a href="">Press Kit</a>
                                         </li>
                                         <li>
-                                            <a href="">Blog</a>
+                                            <a href="https://www.gatikwe.com/blog/">Blog</a>
                                         </li>
                                     </ul>
                                 </div>
