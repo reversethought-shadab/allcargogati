@@ -6,6 +6,10 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import Countedup from "./Countedup";
 import CardHover from "./CardHover";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 const Hero = () => {
   // const gati = [
   //   {
@@ -251,12 +255,12 @@ const Hero = () => {
     );
   };
 
-  const userTypeLogin = () =>{
+  const userTypeLogin = () => {
     return (
       <div className="btn_grp">
         {
           loginUser.map(loginUser => {
-            return(
+            return (
               <a href={loginUser.portalLink} className="login_typr_btn" target="_blank">{loginUser.title}</a>
             )
           })
@@ -276,9 +280,9 @@ const Hero = () => {
                   <Accordion.Item eventKey={item}>
                     <Accordion.Header>
                       {subsec.title === "Services" || subsec.title === "Tools"
-                        ?  <span className="accordion_txt">{subsec.title}</span>
-                        :  <a href={subsec.projectLink} className="accordion_txt">{subsec.title}</a>}
-                     
+                        ? <span className="accordion_txt">{subsec.title}</span>
+                        : <a href={subsec.projectLink} className="accordion_txt">{subsec.title}</a>}
+
                       {subsec.title === "Services" || subsec.title === "Tools"
                         ? iconUI()
                         : ""}
@@ -286,8 +290,8 @@ const Hero = () => {
                     <Accordion.Body className={subsec.title === "Services" ? "service_body" : subsec.title === "Tools" ? "tools_body" : "others_body"}>
                       {
                         subsec.title === "Services" ? serviceSubLinks() :
-                        subsec.title === "Tools" ? toolsSubLinks() : 
-                        ""
+                          subsec.title === "Tools" ? toolsSubLinks() :
+                            ""
                       }
                     </Accordion.Body>
                   </Accordion.Item>
@@ -372,7 +376,7 @@ const Hero = () => {
               {
                 userTypeLogin()
               }
-              
+
             </div>
             <div className="enquire_area">
               <h2 className="menu_heaing">
@@ -595,7 +599,24 @@ const Hero = () => {
     4: handleRateTransit,
     5: handlePickUp,
   };
-  
+
+  const options = {
+    loop: true,
+    responsiveClass: true,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 1000,
+    slideBy: 1,
+    dotsEach: true,
+    responsive: {
+      0: { items: 1 },
+      576: { items: 1 },
+      768: { items: 3 },
+      1000: { items: 4 }
+    }
+  };
+
 
   return (
     <>
@@ -605,31 +626,31 @@ const Hero = () => {
             <ul>
               {
                 sideMenu.map(menu => {
-                  return(
-                    <li 
+                  return (
+                    <li
                       className={
                         menu.id === 1 ? "link_one" :
-                        menu.id === 2 && showTrack ? "link_two active_link" :
-                        menu.id === 3 && showChat ? "link_three active_link" :
-                        menu.id === 4 ? "link_four" :
-                        menu.id === 5 ? "link_five" :
-                        ""
+                          menu.id === 2 && showTrack ? "link_two active_link" :
+                            menu.id === 3 && showChat ? "link_three active_link" :
+                              menu.id === 4 ? "link_four" :
+                                menu.id === 5 ? "link_five" :
+                                  ""
                       }
                     >
                       <div onClick={menuClickHandlers[menu.id] || ""}>
                         {
                           menu.id === 1 && showMenu ? <img src={"images/" + menu.imgUrlTwo + ".png"} alt={menu.altText} /> :
-                          <img src={"images/" + menu.imgUrlOne + ".png"} alt={menu.altText} />
+                            <img src={"images/" + menu.imgUrlOne + ".png"} alt={menu.altText} />
                         }
-                      
+
                         <span className="sideMenuTitle">{menu.title}</span>
                       </div>
                       {
                         menu.id === 1 ? menuUI() :
-                        menu.id === 2 ? trackUI() :
-                        menu.id === 3 ? whatsAppUI() :
-                        ""
-                       }
+                          menu.id === 2 ? trackUI() :
+                            menu.id === 3 ? whatsAppUI() :
+                              ""
+                      }
                     </li>
                   )
                 })
@@ -705,7 +726,7 @@ const Hero = () => {
         </div>
         <div className="right_hero_sec">
           <div className="banner_img">
-       <a href="https://youtu.be/DvUfjFaAfO4?si=zVvOyjH0ALe0GyiB">     <img src="images/main.png" alt="banner_img" /></a>
+            <a href="https://youtu.be/DvUfjFaAfO4?si=zVvOyjH0ALe0GyiB">     <img src="images/main.png" alt="banner_img" /></a>
           </div>
         </div>
       </section>
@@ -819,6 +840,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+
       <section className="work-porcess-area section">
         <div className="container-timeline container">
           <div className="section-header">
@@ -831,24 +854,97 @@ const Hero = () => {
             </p>
           </div>
           <div className="timeline">
-            <div className="round-box">
-              <p>Image Placeholder</p>
-            </div>
-            <div className="round-box">
-              <p>Image Placeholder</p>
-            </div>
-            <div className="date-box">
-              <p>2023</p>
-            </div>
-            <div className="round-box">
-              <p>Image Placeholder</p>
-            </div>
-            <div className="date-box">
-              <p>2022</p>
-            </div>
-            <div className="round-box">
-              <p>Image Placeholder</p>
-            </div>
+            <OwlCarousel className='owl-theme timeline_carousel' {...options} >
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2023</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>CNBC-TV18 India Risk Management Awards:</p>
+                    <p>Gati won two awards – Environment, Social and Governance (ESG) and Business Continuity Management, at the 9th edition</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2022</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>The India Risk Management Awards:</p>
+                    <p>Gati has won a Master of Risk in Cyber Security in the mid-cap category, at the 8th edition of The India Risk Management Awards</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2021</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>7th National Awards for Excellence in CFO Leadership:</p>
+                    <p>Mr. Rohan Mittal has won the ‘Young CFO of the year’ award and Gati-KWE team has been awarded the ‘Strategic Execution work’ award for the Gati Transformation project</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2021</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>Exemplary Leadership Award:</p>
+                    <p>Mr. Adarsh Hegde has been honoured with the ‘Exemplary Leadership Award’ at the 19th edition of Asian Leadership Awards For Excellence in Logistics & Supply Chain</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2021</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>Best Express Logistics Service Provider Of The Year:</p>
+                    <p>Gati-KWE has been awarded as the ‘Best Express Logistics Service Provider of the year’ at the 19th edition of Asian Leadership Awards For Excellence in Logistics & Supply Chain</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2021</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>World Leadership Congress & Awards:</p>
+                    <p>Gati wins ‘Company of the year’ at the 19th global and 4th Indian edition of Business Leader of the Year awards by the World Leadership Congress & Awards 2021</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2021</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>ILSC Awards:</p>
+                    <p>Mr. Shashi Kiran Shetty awarded as the ‘Supply Chain Personality of the Year’ at the India Logistics and Supply Chain (ILSC) Awards 2021</p>
+                  </div>
+                </div>
+              </div>
+              <div className="item">
+                <div className="timeline_box">
+                  <div className="timeline_year_circle">
+                    <h2>2020</h2>
+                  </div>
+                  <div className="timeline_txt">
+                    <p>CII SCALE Awards:</p>
+                    <p>Overall Excellence in Logistics & Supply Chain</p>
+                    <p>Allcargo Logistics and Industrial park- Hyderabad has been awarded as the Industrial/Warehousing Project of the Year at the 12th REALTY+ Conclave & Excellence Awards | SOUTH 2020</p>
+                  </div>
+                </div>
+              </div>
+            </OwlCarousel>
           </div>
         </div>
       </section>

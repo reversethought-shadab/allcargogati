@@ -593,7 +593,7 @@ section {
   position: relative;
   z-index: 1;
 }
-.work-porcess-area::after{
+/* .work-porcess-area::after{
   content: "";
   left: 0;
   top: 59%; 
@@ -602,7 +602,98 @@ section {
   z-index: -1 ;
   width: 100vw;
   transform: translateY(-50% );
+} */
+
+.timeline{
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.timeline_carousel .item{
+  all: unset;
+}
+
+.timeline_carousel .item .timeline_box{
+  text-align: center;
+}
+
+.timeline_carousel .item .timeline_box .timeline_year_circle{
+  width: 125px;
+  height: 125px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline_carousel .item .timeline_box .timeline_year_circle::after {
+  content: "";
+  border: 1px solid #fff;
+  position: absolute;
+  right: unset;
+  width: inherit;
+  top: 50%;
+  left: 100%;
+}
+
+.timeline_carousel .item .timeline_box .timeline_year_circle::before {
+  content: "";
+  border: 1px solid #fff;
+  position: absolute;
+  left: unset;
+  width: inherit;
+  top: 50%;
+  right: 100%;
+}
+
+.timeline_carousel .item .timeline_box .timeline_year_circle h2{
+  margin-bottom: 0;
+  font-size: 28px;
+  color: #f82249;
+}
+
+.timeline_carousel .item .timeline_box .timeline_txt p{
+  color: #fff;
+  margin-top: 15px;
+  padding: 0 8px;
+  font-size: 14px;
+}
+
+.timeline_carousel .owl-nav{
+  margin-top: 0;
+}
+
+.timeline_carousel .owl-nav .owl-prev,
+.timeline_carousel .owl-nav .owl-next{
+  position: absolute;
+  top: 55%;
+  margin: 0 !important;
+}
+
+.timeline_carousel .owl-nav .owl-prev:focus,
+.timeline_carousel .owl-nav .owl-next:focus,
+.timeline_carousel .owl-nav .owl-prev:hover,
+.timeline_carousel .owl-nav .owl-next:hover{
+  background: transparent !important;
+}
+
+.timeline_carousel .owl-nav .owl-prev{
+  left: -12px;
+}
+
+.timeline_carousel .owl-nav .owl-next{
+  right: -12px;
+}
+
+.timeline_carousel .owl-nav .owl-prev span,
+.timeline_carousel .owl-nav .owl-next span{
+  font-size: 35px;
+  color: #fff;
+}
+
 .timeline{
   display: flex;
   justify-content: space-evenly;
@@ -721,12 +812,12 @@ section {
 
 @media only screen and (max-width: 767px) {
   .timeline {
-    display: grid;
+    /* display: grid; */
     justify-content: space-evenly;
 }
-.work-porcess-area::after{
+/* .work-porcess-area::after{
   display:none;
-}
+} */
 .date-box {
   background-color: rgb(35 31 32);
   height: 30px;
@@ -963,5 +1054,12 @@ section {
   .left {
     padding-left: 20px;
     margin-top: 61px;
+  }
+}
+@media (min-width: 576px)
+{
+
+  .container-timeline {
+    max-width: 540px;
   }
 }

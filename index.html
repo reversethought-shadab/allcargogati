@@ -9,7 +9,23 @@
   <body>
     <div id="root"></div>
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="module" src="/src/main.jsx"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script>
+       $(".timeline_carousel").owlCarousel({ 
+        loop: !1, 
+        rewind: !0, 
+        autoplay: !1, 
+        margin: 0, 
+        nav: !0, 
+        responsive: { 
+          0: { items: 1 }, 
+          576: { items: 1 }, 
+          768: { items: 3 }, 
+          1000: { items: 4 }
+         } 
+        })
+    </script>
   </body>
 </html>
